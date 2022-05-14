@@ -1,20 +1,18 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Seja bem vindo 
+Me chamo Anderson e estou estudando C#.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Atualmente trabalho na ClearSale onde tive a oportunidade de participar do programa Clear Tech, o foco é capacitar profissionais internos para as área de QA ou BackEnd.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+# Sobre o repositório:
+Este repositório foi criado para armazenar o conteúdo sobre meu desenvolvimento em c# dentro do ClearTech, vamos la:
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+1.	01-PrimeirosPassos - Introdução sobre C#, laços de repetição e IF;
+2.	02-IntroducaoAOrientacaoAObjetos - Primeiros passos sobre Classes.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+# Fique a vontade
+Relembre ou aprenda algo novo, fique a vontade. 
+
+# Rede
+Conecte-se a minha rede: 
+
+- [Anderson Batista](https://www.linkedin.com/in/anderbatista/)
