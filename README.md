@@ -1,16 +1,8 @@
-# Seja bem vindo 
-Me chamo Anderson e estou estudando C#.
-
-Atualmente trabalho na ClearSale onde tive a oportunidade de participar do programa Clear Tech, o foco é capacitar profissionais internos para as área de QA ou BackEnd.
-
 # Sobre o repositório:
-Este repositório foi criado para armazenar o conteúdo sobre os desafios do ClearTech, vamos la:
-
-1.	Tabuada em java;
-2.	Criar/Pesquisar/Editar categorias.
+Este repositório foi criado para armazenar e relembrar todo o conteúdo sobre os desafios do ClearTech.
 
 # Fique a vontade
-Relembre ou aprenda algo novo, fique a vontade. 
+Relembre ou aprenda algo novo. 
 
 # Rede
 Conecte-se a minha rede: 
