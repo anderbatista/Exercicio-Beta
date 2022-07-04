@@ -1,0 +1,8 @@
+D:\T1-AndersonLeitao\Vapor\Criar-Categorias\bin\Debug\Criar-Categorias.exe.config
+D:\T1-AndersonLeitao\Vapor\Criar-Categorias\bin\Debug\Criar-Categorias.exe
+D:\T1-AndersonLeitao\Vapor\Criar-Categorias\bin\Debug\Criar-Categorias.pdb
+D:\T1-AndersonLeitao\Vapor\Criar-Categorias\obj\Debug\Criar-Categorias.csproj.AssemblyReference.cache
+D:\T1-AndersonLeitao\Vapor\Criar-Categorias\obj\Debug\Criar-Categorias.csproj.SuggestedBindingRedirects.cache
+D:\T1-AndersonLeitao\Vapor\Criar-Categorias\obj\Debug\Criar-Categorias.csproj.CoreCompileInputs.cache
+D:\T1-AndersonLeitao\Vapor\Criar-Categorias\obj\Debug\Criar-Categorias.exe
+D:\T1-AndersonLeitao\Vapor\Criar-Categorias\obj\Debug\Criar-Categorias.pdb
