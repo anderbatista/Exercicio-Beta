@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj": {}
+    "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj": {}
   },
   "projects": {
-    "D:\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj": {
+    "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj",
+        "projectUniqueName": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj",
         "projectName": "ProjetoAPI",
-        "projectPath": "D:\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj",
-        "packagesPath": "C:\\Users\\ClearTech\\.nuget\\packages\\",
-        "outputPath": "D:\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\obj\\",
+        "projectPath": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj",
+        "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ClearTech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -122,17 +122,17 @@
         }
       }
     },
-    "D:\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj": {
+    "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj",
+        "projectUniqueName": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj",
         "projectName": "ProjetoAPITeste",
-        "projectPath": "D:\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj",
-        "packagesPath": "C:\\Users\\ClearTech\\.nuget\\packages\\",
-        "outputPath": "D:\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\obj\\",
+        "projectPath": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj",
+        "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ClearTech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,8 +146,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj": {
-                "projectPath": "D:\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj"
+              "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj": {
+                "projectPath": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj"
               }
             }
           }
