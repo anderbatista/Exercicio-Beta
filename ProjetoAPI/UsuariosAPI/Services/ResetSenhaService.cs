@@ -18,10 +18,12 @@ namespace UsuariosAPI.Services
         {
             var buscaUser = _signInManager.UserManager.FindByEmailAsync(resetSenha.Email).Result;
             var TrocaSenha = _signInManager.UserManager.ChangePasswordAsync(buscaUser, resetSenha.Password, resetSenha.NewPassword).Result;
+
             if(TrocaSenha.Succeeded)
             {
                 return Result.Ok();
             }
+
             return Result.Fail("Erro ao alterar a senha");
         }
     }

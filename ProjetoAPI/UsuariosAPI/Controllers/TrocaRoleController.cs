@@ -23,10 +23,12 @@ namespace UsuariosAPI.Controllers
         public IActionResult TrocaRole(TrocaRoleRequest trocaRole)
         {
             Result resultado = _trocaRoleService.TrocaRole(trocaRole);
+
             if (resultado.IsFailed)
             {
                 return Unauthorized(resultado.Errors.FirstOrDefault());
             }
+
             return Ok("Permissão alterada com sucesso!");
         }
     }

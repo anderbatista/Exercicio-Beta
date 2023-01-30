@@ -39,8 +39,8 @@ namespace TesteAPI.Services
             subcategoriaDao.Setup(x => x.BuscaCategoriaPorId(It.IsAny<Subcategoria>())).Returns(new Categoria() { Status = true }); //Objeto de categoria
             var exDataCriacao = $"{DateTime.Now:yyyy-MM-dd}";
             var exStatus = true;
-            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper);
-            var controller = new SubcategoriaController(produtoDao.Object, categoriaDao.Object, subcategoriaDao.Object, _mapper, subcategoriaService);
+            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper, produtoDao.Object);
+            var controller = new SubcategoriaController(subcategoriaService);
             //Act
             var resposta = (ObjectResult)controller.CadastrarSubcategorias(new CreateSubcategoriaDto() { Nome = "Nome" });
             var subcategorias = Assert.IsAssignableFrom<Subcategoria>(resposta.Value);
@@ -56,8 +56,8 @@ namespace TesteAPI.Services
             subcategoriaDao.Setup(x => x.CadastrarSubcategoria(It.IsAny<Subcategoria>())).Returns(new Subcategoria() { Nome = "NãoPodeSerNulo", DataCriacao = DateTime.Now, Status = true });
             subcategoriaDao.Setup(x => x.BuscaCategoriaPorId(It.IsAny<Subcategoria>())).Returns(new Categoria() { Status = true }); //Objeto de categoria
             var exDataCriacao = $"{DateTime.Now:yyyy-MM-dd}";
-            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper);
-            var controller = new SubcategoriaController(produtoDao.Object, categoriaDao.Object, subcategoriaDao.Object, _mapper, subcategoriaService);
+            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper, produtoDao.Object);
+            var controller = new SubcategoriaController(subcategoriaService);
             //Act
             var resposta = (ObjectResult)controller.CadastrarSubcategorias(new CreateSubcategoriaDto() { Nome = "Nome" });
             var subcategorias = Assert.IsAssignableFrom<Subcategoria>(resposta.Value);
@@ -70,8 +70,8 @@ namespace TesteAPI.Services
             //Arrange
             subcategoriaDao.Setup(x => x.CadastrarSubcategoria(It.IsAny<Subcategoria>())).Returns(new Subcategoria() { Nome = "NãoPodeSerNulo", DataCriacao = DateTime.Now, Status = true });
             subcategoriaDao.Setup(x => x.BuscaCategoriaPorId(It.IsAny<Subcategoria>())).Returns(new Categoria() { Status = true }); //Objeto de categoria
-            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper);
-            var controller = new SubcategoriaController(produtoDao.Object, categoriaDao.Object, subcategoriaDao.Object, _mapper, subcategoriaService);
+            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper, produtoDao.Object);
+            var controller = new SubcategoriaController(subcategoriaService);
             //Act
             var resposta = (ObjectResult)controller.CadastrarSubcategorias(new CreateSubcategoriaDto() { Nome = "Nome" });            
             //Assert
@@ -81,10 +81,10 @@ namespace TesteAPI.Services
         public void Cadastro_Verifica_Status_False()
         {
             //Arrange
-            subcategoriaDao.Setup(x => x.CadastrarSubcategoria(It.IsAny<Subcategoria>())).Returns(new Subcategoria() { Nome = "NãoPodeSerNulo", DataCriacao = DateTime.Now, Status = false });
+            subcategoriaDao.Setup(x => x.CadastrarSubcategoria(It.IsAny<Subcategoria>())).Returns(new Subcategoria() { Nome = "NãoPodeSerNulo", DataCriacao = DateTime.Now});
             subcategoriaDao.Setup(x => x.BuscaCategoriaPorId(It.IsAny<Subcategoria>())).Returns(new Categoria() { Status = true }); //Objeto de categoria
-            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper);
-            var controller = new SubcategoriaController(produtoDao.Object, categoriaDao.Object, subcategoriaDao.Object, _mapper, subcategoriaService);
+            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper, produtoDao.Object);
+            var controller = new SubcategoriaController(subcategoriaService);
             //Act
             var resposta = (ObjectResult)controller.CadastrarSubcategorias(new CreateSubcategoriaDto() { Nome = "Nome", Status = false });
             //Assert
@@ -96,8 +96,8 @@ namespace TesteAPI.Services
             //Arrange
             subcategoriaDao.Setup(x => x.CadastrarSubcategoria(It.IsAny<Subcategoria>())).Returns(new Subcategoria() { Nome = "NãoPodeSerNulo" });
             subcategoriaDao.Setup(x => x.BuscaCategoriaPorId(It.IsAny<Subcategoria>())).Returns(new Categoria() { Status = true }); //Objeto de categoria
-            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper);
-            var controller = new SubcategoriaController(produtoDao.Object, categoriaDao.Object, subcategoriaDao.Object, _mapper, subcategoriaService);
+            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper, produtoDao.Object);
+            var controller = new SubcategoriaController(subcategoriaService);
             //Act
             var resposta = (ObjectResult)controller.CadastrarSubcategorias(new CreateSubcategoriaDto() { Nome = "Nome" });
             var subcategorias = Assert.IsAssignableFrom<Subcategoria>(resposta.Value);
@@ -111,8 +111,8 @@ namespace TesteAPI.Services
             //Arrange
             subcategoriaDao.Setup(x => x.CadastrarSubcategoria(It.IsAny<Subcategoria>())).Returns((Subcategoria)null);
             subcategoriaDao.Setup(x => x.BuscaCategoriaPorId(It.IsAny<Subcategoria>())).Returns(new Categoria() { Status = true }); //Objeto de categoria
-            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper);
-            var controller = new SubcategoriaController(produtoDao.Object, categoriaDao.Object, subcategoriaDao.Object, _mapper, subcategoriaService);
+            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper, produtoDao.Object);
+            var controller = new SubcategoriaController(subcategoriaService);
             //Act
             var resposta = (BadRequestObjectResult)controller.CadastrarSubcategorias(new CreateSubcategoriaDto() { Nome = "Nome" });
             //Assert
@@ -124,8 +124,8 @@ namespace TesteAPI.Services
             //Arrange
             subcategoriaDao.Setup(x => x.CadastrarSubcategoria(It.IsAny<Subcategoria>())).Returns(new Subcategoria() { Nome = "NãoPodeSerNulo" });
             subcategoriaDao.Setup(x => x.BuscaCategoriaPorId(It.IsAny<Subcategoria>())).Returns(new Categoria() { Status = true }); //Objeto de categoria
-            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper);
-            var controller = new SubcategoriaController(produtoDao.Object, categoriaDao.Object, subcategoriaDao.Object, _mapper, subcategoriaService);
+            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper, produtoDao.Object);
+            var controller = new SubcategoriaController(subcategoriaService);
             //Act
             var resposta = (ObjectResult)controller.CadastrarSubcategorias(new CreateSubcategoriaDto() 
             {
@@ -146,8 +146,8 @@ namespace TesteAPI.Services
             //Arrange
             subcategoriaDao.Setup(x => x.CadastrarSubcategoria(It.IsAny<Subcategoria>())).Returns(new Subcategoria() { Nome = "NãoPodeSerNulo" });
             subcategoriaDao.Setup(x => x.BuscaCategoriaPorId(It.IsAny<Subcategoria>())).Returns(new Categoria() { Status = true }); //Objeto de categoria
-            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper);
-            var controller = new SubcategoriaController(produtoDao.Object, categoriaDao.Object, subcategoriaDao.Object, _mapper, subcategoriaService);
+            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper, produtoDao.Object);
+            var controller = new SubcategoriaController(subcategoriaService);
             //Act
             var resposta = (StatusCodeResult)controller.CadastrarSubcategorias(new CreateSubcategoriaDto()
             {
@@ -168,8 +168,8 @@ namespace TesteAPI.Services
             //Arrange
             subcategoriaDao.Setup(x => x.CadastrarSubcategoria(It.IsAny<Subcategoria>())).Returns(new Subcategoria() { Nome = "NãoPodeSerNulo" });
             subcategoriaDao.Setup(x => x.BuscaCategoriaPorId(It.IsAny<Subcategoria>())).Returns(new Categoria() { Status = true }); //Objeto de categoria
-            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper);
-            var controller = new SubcategoriaController(produtoDao.Object, categoriaDao.Object, subcategoriaDao.Object, _mapper, subcategoriaService);
+            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper, produtoDao.Object);
+            var controller = new SubcategoriaController(subcategoriaService);
             //Act
             var resposta = (StatusCodeResult)controller.CadastrarSubcategorias(new CreateSubcategoriaDto()
             {
@@ -184,8 +184,8 @@ namespace TesteAPI.Services
             //Arrange
             subcategoriaDao.Setup(x => x.CadastrarSubcategoria(It.IsAny<Subcategoria>())).Returns(new Subcategoria() { Nome = "NãoPodeSerNulo" });
             subcategoriaDao.Setup(x => x.BuscaCategoriaPorId(It.IsAny<Subcategoria>())).Returns(new Categoria() { Status = false }); //Objeto de categoria
-            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper);
-            var controller = new SubcategoriaController(produtoDao.Object, categoriaDao.Object, subcategoriaDao.Object, _mapper, subcategoriaService);
+            var subcategoriaService = new SubcategoriaService(subcategoriaDao.Object, categoriaDao.Object, _mapper, produtoDao.Object);
+            var controller = new SubcategoriaController(subcategoriaService);
             //Act
             var resposta = (ObjectResult)controller.CadastrarSubcategorias(new CreateSubcategoriaDto()
             {

@@ -17,7 +17,7 @@ namespace TesteAPI.Services
         private Mock<ISubcategoriaDao> subcategoriaDao;
         public CategoriaTeste()
         {
-            categoriaService = new CategoriaService(new Mock<ICategoriaDao>().Object, new Mock<IMapper>().Object);
+            categoriaService = new CategoriaService(new Mock<ICategoriaDao>().Object, new Mock<ISubcategoriaDao>().Object, new Mock<IMapper>().Object);
             categoriaDao = new Mock<ICategoriaDao>();
             subcategoriaDao = new Mock<ISubcategoriaDao>();
         }
@@ -54,7 +54,7 @@ namespace TesteAPI.Services
                 Status = true
             };
             //Act
-            var controller = new CategoriaController(categoriaDao.Object, subcategoriaDao.Object, categoriaService);
+            var controller = new CategoriaController(categoriaService);
             var resposta = (ObjectResult)controller.CadastrarCategorias(categoriaTeste);
             //Assert
             Assert.Equal(201, resposta.StatusCode);
@@ -69,10 +69,10 @@ namespace TesteAPI.Services
                 Status = false
             };
             //Act
-            var controller = new CategoriaController(categoriaDao.Object, subcategoriaDao.Object, categoriaService);
+            var controller = new CategoriaController(categoriaService);
             var resposta = (ObjectResult)controller.CadastrarCategorias(categoriaTeste);
             //Assert
-            Assert.Equal(404, resposta.StatusCode);
+            Assert.Equal(400, resposta.StatusCode);
         }
         [Fact]
         public void Cadastrar__128Caracteres_201_Created()
@@ -89,7 +89,7 @@ namespace TesteAPI.Services
                        "aaaaaaaa"
             };
             //Act
-            var controller = new CategoriaController(categoriaDao.Object, subcategoriaDao.Object, categoriaService);
+            var controller = new CategoriaController(categoriaService);
             var resposta = (ObjectResult)controller.CadastrarCategorias(categoriaTeste);
             //Assert
             Assert.Equal(201, resposta.StatusCode);
@@ -109,13 +109,13 @@ namespace TesteAPI.Services
                        "aaaaaaaaaaaaa"
             };
             //Act
-            var controller = new CategoriaController(categoriaDao.Object, subcategoriaDao.Object, categoriaService);
-            var resposta = (StatusCodeResult)controller.CadastrarCategorias(categoriaTeste);
+            var controller = new CategoriaController(categoriaService);
+            var resposta = (ObjectResult)controller.CadastrarCategorias(categoriaTeste);
             //Assert
             Assert.Equal(400, resposta.StatusCode);
         }
         [Fact]
-        public void Cadastrar_Caracteres_NuloOuVazio_404_NotFound()
+        public void Cadastrar_Caracteres_NuloOuVazio_400_BadRequest()
         {
             //Arrange
             var categoriaTeste = new CreateCategoriaDto()
@@ -123,10 +123,10 @@ namespace TesteAPI.Services
                 Nome = ""
             };
             //Act
-            var controller = new CategoriaController(categoriaDao.Object, subcategoriaDao.Object, categoriaService);
+            var controller = new CategoriaController(categoriaService);
             var resposta = (ObjectResult)controller.CadastrarCategorias(categoriaTeste);
             //Assert
-            Assert.Equal(404, resposta.StatusCode);
+            Assert.Equal(400, resposta.StatusCode);
         }
     }
 }
