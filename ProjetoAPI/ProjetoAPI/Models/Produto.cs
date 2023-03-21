@@ -33,9 +33,11 @@ namespace ProjetoAPI.Models
         public bool Status { get; set; }
         public DateTime DataCriacao { get; set; }
         public DateTime? DataAlteracao { get; set; }
+        [JsonIgnore]
         public virtual Subcategoria Subcategoria { get; set; }
         public int SubcategoriaId { get; set; }
+        [JsonIgnore]
         public virtual CentroDistribuicao CentroDeDistribuicao { get; set; }
-        public int CentroId { get; set; }        
+        public int CentroId { get; set; }
     }
 }

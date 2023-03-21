@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj": {}
+    "D:\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj": {
+    "D:\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj",
+        "projectUniqueName": "D:\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj",
         "projectName": "ProjetoAPI",
-        "projectPath": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj",
-        "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\obj\\",
+        "projectPath": "D:\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj",
+        "packagesPath": "C:\\Users\\ClearTech\\.nuget\\packages\\",
+        "outputPath": "D:\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ClearTech\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,6 +68,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.17, )"
@@ -89,6 +93,10 @@
             "MySqlConnector": {
               "target": "Package",
               "version": "[2.1.13, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -118,21 +126,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj": {
+    "D:\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj",
+        "projectUniqueName": "D:\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj",
         "projectName": "ProjetoAPITeste",
-        "projectPath": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj",
-        "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\obj\\",
+        "projectPath": "D:\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\ProjetoAPITeste.csproj",
+        "packagesPath": "C:\\Users\\ClearTech\\.nuget\\packages\\",
+        "outputPath": "D:\\T1-AndersonLeitao\\ProjetoAPI\\TesteAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ClearTech\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,8 +154,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj": {
-                "projectPath": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj"
+              "D:\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj": {
+                "projectPath": "D:\\T1-AndersonLeitao\\ProjetoAPI\\ProjetoAPI\\ProjetoAPI.csproj"
               }
             }
           }
@@ -215,7 +223,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

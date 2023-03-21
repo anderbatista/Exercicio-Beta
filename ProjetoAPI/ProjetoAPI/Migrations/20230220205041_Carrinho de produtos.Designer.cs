@@ -9,8 +9,8 @@ using ProjetoAPI.Data;
 namespace ProjetoAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221216114725_Reparando erros")]
-    partial class Reparandoerros
+    [Migration("20230220205041_Carrinho de produtos")]
+    partial class Carrinhodeprodutos
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -18,6 +18,45 @@ namespace ProjetoAPI.Migrations
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.17");
+
+            modelBuilder.Entity("ProjetoAPI.Models.CarrinhoDeCompra", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Bairro")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Cep")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Complemento")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Localidade")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Logradouro")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Numero")
+                        .HasColumnType("int");
+
+                    b.Property<int>("QuantidadeTotalDeProdutos")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Uf")
+                        .HasColumnType("text");
+
+                    b.Property<double>("ValorTotalCarrinho")
+                        .HasColumnType("double");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CarrinhoDeCompra");
+                });
 
             modelBuilder.Entity("ProjetoAPI.Models.Categoria", b =>
                 {
@@ -28,7 +67,7 @@ namespace ProjetoAPI.Migrations
                     b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime>("DataCriacao")
+                    b.Property<DateTime?>("DataCriacao")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Nome")
@@ -36,7 +75,7 @@ namespace ProjetoAPI.Migrations
                         .HasMaxLength(128)
                         .HasColumnType("varchar(128)");
 
-                    b.Property<bool>("Status")
+                    b.Property<bool?>("Status")
                         .HasColumnType("tinyint(1)");
 
                     b.HasKey("Id");
@@ -152,6 +191,34 @@ namespace ProjetoAPI.Migrations
                     b.ToTable("Produtos");
                 });
 
+            modelBuilder.Entity("ProjetoAPI.Models.ProdutoNoCarrinho", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdCarrinho")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdProduto")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeProduto")
+                        .HasColumnType("text");
+
+                    b.Property<int>("QuantidadeProduto")
+                        .HasColumnType("int");
+
+                    b.Property<double>("ValorUnitarioProduto")
+                        .HasColumnType("double");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdCarrinho");
+
+                    b.ToTable("ProdutosNoCarrinho");
+                });
+
             modelBuilder.Entity("ProjetoAPI.Models.Subcategoria", b =>
                 {
                     b.Property<int>("Id")
@@ -201,6 +268,17 @@ namespace ProjetoAPI.Migrations
                     b.Navigation("Subcategoria");
                 });
 
+            modelBuilder.Entity("ProjetoAPI.Models.ProdutoNoCarrinho", b =>
+                {
+                    b.HasOne("ProjetoAPI.Models.CarrinhoDeCompra", "CarrinhoDeCompra")
+                        .WithMany("ProdutosNoCarrinho")
+                        .HasForeignKey("IdCarrinho")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CarrinhoDeCompra");
+                });
+
             modelBuilder.Entity("ProjetoAPI.Models.Subcategoria", b =>
                 {
                     b.HasOne("ProjetoAPI.Models.Categoria", "Categoria")
@@ -210,6 +288,11 @@ namespace ProjetoAPI.Migrations
                         .IsRequired();
 
                     b.Navigation("Categoria");
+                });
+
+            modelBuilder.Entity("ProjetoAPI.Models.CarrinhoDeCompra", b =>
+                {
+                    b.Navigation("ProdutosNoCarrinho");
                 });
 
             modelBuilder.Entity("ProjetoAPI.Models.Categoria", b =>

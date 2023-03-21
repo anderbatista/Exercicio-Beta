@@ -1,10 +1,10 @@
 ﻿using System;
 using AutoMapper;
+using Dapper;
 using ProjetoAPI.Data.Dtos.ProdutoDto;
 using ProjetoAPI.Models;
 using System.Collections.Generic;
 using System.Linq;
-using Dapper;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 using System.Data;

@@ -6,6 +6,7 @@ using ProjetoAPI.Data.Dtos.CategoriaDto;
 using ProjetoAPI.Data.Repository;
 using ProjetoAPI.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -32,42 +33,13 @@ namespace ProjetoAPI.Services
             categoriaDao.CadastrarCategoria(categoriaDto);
             return categoriaDto;
         }
-        public IQueryable PesquisaCategoria([FromQuery] string nome, [FromQuery] bool? status, [FromQuery] string ordem)
+
+        public List<ReadCategoriaDto>PesquisaCategoriaPersonalizada(ReadCategoriaDto readCat,
+            string ordem, int itensPg, int pgAtual)
         {
-            IQueryable<Categoria> lista = null;
-            if (lista == null)
-            {
-                if (nome != null && nome.Length < 3)
-                {
-                    return null;
-                }
-                if (nome != null && nome.Length >= 3)
-                {
-                    lista = categoriaDao.ListarCategoriasPorNome(nome);
-                }
-                else
-                {
-                    lista = categoriaDao.ListarCategorias();
-                }
-                if (status != null)
-                {
-                    lista = lista.Where(c => c.Status == status);
-                }
-                if (ordem != null)
-                {
-                    if (ordem == "za")
-                    {
-                        lista = lista.OrderByDescending(c => c.Nome);
-                    }
-                    else if (ordem == "az")
-                    {
-                        lista = lista.OrderBy(c => c.Nome);
-                    }
-                }
-                return lista;
-            }
-            return null;
+            return categoriaDao.PesquisaCategoriaPersonalizada(readCat, ordem, itensPg, pgAtual);
         }
+
         public bool EditarCategoria(int id, [FromBody] UpdateCategoriaDto novoNomeDto)
         {
             var categoria = categoriaDao.BuscarCategoriasPorID(id);
@@ -87,6 +59,7 @@ namespace ProjetoAPI.Services
             categoriaDao.FinalEditarCategoria(novoNomeDto, id);
             return true;
         }
+
         public bool DeletaCategoria(int id)
         {
             Categoria categoria = categoriaDao.BuscarCategoriasPorID(id);

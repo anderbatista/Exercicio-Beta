@@ -1,13 +1,6 @@
-﻿using System;
-using System.Linq;
-using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
-using ProjetoAPI.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using ProjetoAPI.Data.Dtos.CategoriaDto;
-using ProjetoAPI.Data;
 using ProjetoAPI.Services;
-using FluentResults;
-using System.Runtime.Intrinsics.Arm;
 
 namespace ProjetoAPI.Controllers
 {
@@ -20,6 +13,7 @@ namespace ProjetoAPI.Controllers
         {
             this.categoriaService = categoriaService;
         }
+
         [HttpPost]
         public IActionResult CadastrarCategorias([FromBody] CreateCategoriaDto categoriaDto)
         {
@@ -28,13 +22,19 @@ namespace ProjetoAPI.Controllers
                 "\nImpossível cadastrar categoria com status inativo.");
             return CreatedAtAction(nameof(PesquisaCategoria), new { nome = categoriaDto.Nome }, categoriaDto);
         }
+
         [HttpGet("buscar")]
-        public IActionResult PesquisaCategoria([FromQuery] string nome, [FromQuery] bool? status, [FromQuery] string ordem)
+        public IActionResult PesquisaCategoria([FromQuery] ReadCategoriaDto readCat,
+            [FromQuery] string ordem, [FromQuery] int itensPg, [FromQuery] int pgAtual)
         {
-            var resultado = categoriaService.PesquisaCategoria(nome, status, ordem);
-            if (resultado == null) return BadRequest("Favor digitar mais de 3 caracteres.");
-            return Ok(resultado);
+            var result = categoriaService.PesquisaCategoriaPersonalizada(readCat, ordem, itensPg, pgAtual);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
         }
+
         [HttpPut("editar/{id}")]
         public IActionResult EditarCategoria(int id, [FromBody] UpdateCategoriaDto novoNomeDto)
         {
@@ -42,6 +42,7 @@ namespace ProjetoAPI.Controllers
             if (resultado == false) return BadRequest("Categoria não existe.");
             return Ok("Editado com sucesso.");
         }
+
         [HttpDelete("{id}")]
         public IActionResult DeletaCategoria(int id)
         {

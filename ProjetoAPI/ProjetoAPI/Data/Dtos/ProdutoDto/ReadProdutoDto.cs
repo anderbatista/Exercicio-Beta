@@ -17,11 +17,11 @@ namespace ProjetoAPI.Data.Dtos.ProdutoDto
         public double Comprimento { get; set; }
         public double Valor { get; set; }
         public int QtdeEstoque { get; set; }
-        public int CentroId { get; set; }
         public bool Status { get; set; }
         public DateTime DataCriacao { get; set; }
         public DateTime DataAlteracao { get; set; }
         public int SubcategoriaId { get; set; }
+        public int CentroId { get; set; }
 
     }
 }

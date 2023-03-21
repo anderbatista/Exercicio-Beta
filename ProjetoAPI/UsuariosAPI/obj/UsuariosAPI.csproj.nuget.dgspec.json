@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\UsuariosAPI\\UsuariosAPI.csproj": {}
+    "D:\\T1-AndersonLeitao\\ProjetoAPI\\UsuariosAPI\\UsuariosAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\UsuariosAPI\\UsuariosAPI.csproj": {
+    "D:\\T1-AndersonLeitao\\ProjetoAPI\\UsuariosAPI\\UsuariosAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\UsuariosAPI\\UsuariosAPI.csproj",
+        "projectUniqueName": "D:\\T1-AndersonLeitao\\ProjetoAPI\\UsuariosAPI\\UsuariosAPI.csproj",
         "projectName": "UsuariosAPI",
-        "projectPath": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\UsuariosAPI\\UsuariosAPI.csproj",
-        "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ander\\Desktop\\Clear Tech\\T1-AndersonLeitao\\ProjetoAPI\\UsuariosAPI\\obj\\",
+        "projectPath": "D:\\T1-AndersonLeitao\\ProjetoAPI\\UsuariosAPI\\UsuariosAPI.csproj",
+        "packagesPath": "C:\\Users\\ClearTech\\.nuget\\packages\\",
+        "outputPath": "D:\\T1-AndersonLeitao\\ProjetoAPI\\UsuariosAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ClearTech\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,7 +130,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

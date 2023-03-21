@@ -147,3 +147,5 @@ D:\T1-AndersonLeitao\ProjetoAPI\TesteAPI\obj\Debug\net5.0\refint\ProjetoAPITeste
 D:\T1-AndersonLeitao\ProjetoAPI\TesteAPI\obj\Debug\net5.0\ProjetoAPITeste.pdb
 D:\T1-AndersonLeitao\ProjetoAPI\TesteAPI\obj\Debug\net5.0\ProjetoAPITeste.genruntimeconfig.cache
 D:\T1-AndersonLeitao\ProjetoAPI\TesteAPI\obj\Debug\net5.0\ref\ProjetoAPITeste.dll
+D:\T1-AndersonLeitao\ProjetoAPI\TesteAPI\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\T1-AndersonLeitao\ProjetoAPI\TesteAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll

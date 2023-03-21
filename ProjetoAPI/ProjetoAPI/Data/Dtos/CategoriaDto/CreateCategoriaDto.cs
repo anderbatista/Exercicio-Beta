@@ -11,8 +11,6 @@ namespace ProjetoAPI.Data.Dtos.CategoriaDto
         [StringLength(128, ErrorMessage = "Quantidade máxima de 128 caracteres.")]
         public string Nome { get; set; }
         public DateTime? DataCriacao { get; set; } = DateTime.Now;
-        [JsonIgnore]
-        public DateTime? DataAlteracao { get; set; } = null;
         public bool? Status { get; set; } = true;
     }
 }

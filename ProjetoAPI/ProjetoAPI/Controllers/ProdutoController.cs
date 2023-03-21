@@ -1,9 +1,5 @@
-﻿using System;
-using System.Linq;
-using Microsoft.AspNetCore.Mvc;
-using ProjetoAPI.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using ProjetoAPI.Data.Dtos.ProdutoDto;
-using ProjetoAPI.Data;
 using ProjetoAPI.Services;
 using System.Threading.Tasks;
 using FluentResults;

@@ -16,8 +16,7 @@ namespace ProjetoAPI.Models
         public string Nome { get; set; }
         public bool? Status { get; set; }
         public DateTime? DataCriacao { get; set; }
-        public DateTime? DataAlteracao { get; set; }
-        [JsonIgnore]
+        public DateTime? DataAlteracao { get; set; } = null;
         public virtual List<Subcategoria> Subcategorias { get; set; }
     }
 }

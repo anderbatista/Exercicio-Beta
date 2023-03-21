@@ -8,8 +8,10 @@ namespace ProjetoAPI.Data
 {
     public interface ISubcategoriaDao
     {
-        List<Subcategoria> ListaSubcategoriaPorIdcategoria(int id);
         Subcategoria CadastrarSubcategoria(Subcategoria SubcategoriaDto);
+        List<Subcategoria> ListaSubcategoriaPorIdcategoria(int id);
+        public List<ReadSubcategoriaDto> PesquisaSubcategoriaPersonalizada(ReadSubcategoriaDto readSubcategoria,
+           string ordem, int itensPg, int pgAtual);
         IQueryable<Subcategoria> ListarSubcategoriasPorNome(string nome);
         IQueryable<Subcategoria> ListarSubcategorias();
         Categoria BuscaCategoriaPorId(Subcategoria subcategoria);

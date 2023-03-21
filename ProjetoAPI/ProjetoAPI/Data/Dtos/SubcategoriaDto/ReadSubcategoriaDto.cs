@@ -7,15 +7,12 @@ using System.ComponentModel.DataAnnotations;
 namespace ProjetoAPI.Data.Dtos.SubcategoriaDto
 {
     public class ReadSubcategoriaDto
-    {
-        [Key]
-        [Required]
-        public int Id { get; set; }
-        [Required]
+    {       
+        public int? Id { get; set; }
         public string Nome { get; set; }
-        public bool Status { get; set; } = true;
-        public DateTime DataCriacao { get; set; }
-        public DateTime DataAlteracao { get; set; }
-        public Categoria Categoria { get; set; }
+        public bool? Status { get; set; }
+        public DateTime? DataCriacao { get; set; }
+        public DateTime? DataAlteracao { get; set; }
+        public int CategoriaId { get; set; }
     }
 }

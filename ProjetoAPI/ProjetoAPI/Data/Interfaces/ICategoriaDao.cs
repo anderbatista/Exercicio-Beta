@@ -14,5 +14,7 @@ namespace ProjetoAPI.Data
         Categoria BuscarCategoriasPorID(int id);
         void FinalEditarCategoria(UpdateCategoriaDto novoNomeDto, int id);
         void FinalDeletarCategoria(int id);
+        public List<ReadCategoriaDto> PesquisaCategoriaPersonalizada(ReadCategoriaDto readCategoria,
+            string ordem, int itensPg, int pgAtual);
     }
 }

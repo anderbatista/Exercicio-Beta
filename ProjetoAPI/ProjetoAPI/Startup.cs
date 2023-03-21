@@ -11,6 +11,9 @@ using ProjetoAPI.Data.Interfaces;
 using ProjetoAPI.Data.Repository;
 using ProjetoAPI.Services;
 using System;
+using Newtonsoft.Json;
+using ProjetoAPI.Middleware;
+//using System.Text.Json.Serialization; // <- Usar outro pacote
 
 namespace ProjetoAPI
 {
@@ -28,20 +31,31 @@ namespace ProjetoAPI
         {
             //services.AddTransient<IDbConnection>((sp) => new MySqlConnection(Configuration.GetConnectionString("CategoriaConnection")));
             services.AddDbContext<AppDbContext>(opts => opts.UseLazyLoadingProxies().UseMySQL(Configuration.GetConnectionString("CategoriaConnection")));
+
             services.AddScoped<ICategoriaDao, CategoriaDao>();
             services.AddScoped<ISubcategoriaDao, SubcategoriaDao>();
             services.AddScoped<IProdutoDao, ProdutoDao>();
             services.AddScoped<ICentroDistribuicaoDao, CentroDistribuicaoDao>();
+            services.AddScoped<ICarrinhoDeCompraDao, CarrinhoDeCompraDao>();
+            services.AddScoped<IProdutoNoCarrinhoDao, ProdutoNoCarrinhoDao>();
+
+            services.AddScoped<CarrinhoDeCompraService>();
             services.AddScoped<ProdutoService>();
             services.AddScoped<CentroDistribuicaoService>();
+            services.AddScoped<ConsultaCepService>();
             services.AddScoped<CategoriaService>();
             services.AddScoped<SubcategoriaService>();
-            services.AddControllers();
+
+            services.AddControllers()
+                .AddNewtonsoftJson(opts =>
+                opts.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjetoAPI", Version = "v1" });
             });
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +69,8 @@ namespace ProjetoAPI
             }
 
             app.UseHttpsRedirection();
+
+            app.UseMiddleware(typeof(ErrorHandlingMiddleware)); // <- Novo
 
             app.UseRouting();
 

@@ -4,10 +4,31 @@ using MySql.EntityFrameworkCore.Metadata;
 
 namespace ProjetoAPI.Migrations
 {
-    public partial class Centrodedistricuicao : Migration
+    public partial class Carrinhodeprodutos : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "CarrinhoDeCompra",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    ValorTotalCarrinho = table.Column<double>(type: "double", nullable: false),
+                    QuantidadeTotalDeProdutos = table.Column<int>(type: "int", nullable: false),
+                    Cep = table.Column<string>(type: "text", nullable: false),
+                    Logradouro = table.Column<string>(type: "text", nullable: true),
+                    Numero = table.Column<int>(type: "int", nullable: false),
+                    Complemento = table.Column<string>(type: "text", nullable: true),
+                    Bairro = table.Column<string>(type: "text", nullable: true),
+                    Localidade = table.Column<string>(type: "text", nullable: true),
+                    Uf = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CarrinhoDeCompra", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Categorias",
                 columns: table => new
@@ -15,8 +36,8 @@ namespace ProjetoAPI.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Nome = table.Column<string>(type: "varchar(128)", maxLength: 128, nullable: false),
-                    Status = table.Column<bool>(type: "tinyint(1)", nullable: false),
-                    DataCriacao = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Status = table.Column<bool>(type: "tinyint(1)", nullable: true),
+                    DataCriacao = table.Column<DateTime>(type: "datetime", nullable: true),
                     DataAlteracao = table.Column<DateTime>(type: "datetime", nullable: true)
                 },
                 constraints: table =>
@@ -45,6 +66,29 @@ namespace ProjetoAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CentrosD", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProdutosNoCarrinho",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    IdCarrinho = table.Column<int>(type: "int", nullable: false),
+                    IdProduto = table.Column<int>(type: "int", nullable: false),
+                    NomeProduto = table.Column<string>(type: "text", nullable: true),
+                    ValorUnitarioProduto = table.Column<double>(type: "double", nullable: false),
+                    QuantidadeProduto = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProdutosNoCarrinho", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ProdutosNoCarrinho_CarrinhoDeCompra_IdCarrinho",
+                        column: x => x.IdCarrinho,
+                        principalTable: "CarrinhoDeCompra",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -118,6 +162,11 @@ namespace ProjetoAPI.Migrations
                 column: "SubcategoriaId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ProdutosNoCarrinho_IdCarrinho",
+                table: "ProdutosNoCarrinho",
+                column: "IdCarrinho");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Subcategorias_CategoriaId",
                 table: "Subcategorias",
                 column: "CategoriaId");
@@ -129,10 +178,16 @@ namespace ProjetoAPI.Migrations
                 name: "Produtos");
 
             migrationBuilder.DropTable(
+                name: "ProdutosNoCarrinho");
+
+            migrationBuilder.DropTable(
                 name: "CentrosD");
 
             migrationBuilder.DropTable(
                 name: "Subcategorias");
+
+            migrationBuilder.DropTable(
+                name: "CarrinhoDeCompra");
 
             migrationBuilder.DropTable(
                 name: "Categorias");

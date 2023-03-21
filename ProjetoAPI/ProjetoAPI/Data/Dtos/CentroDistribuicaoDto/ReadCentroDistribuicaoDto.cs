@@ -23,6 +23,9 @@ namespace ProjetoAPI.Data.DTOs.CentroDistribuicaoDto
         public DateTime? DataAlteracao { get; set; }
         [JsonIgnore]
         public virtual List<ReadProdutoDto> Produtos { get; set; }
+
+        // É possivel retirar essas 3 infos abaixo do JSON, fiz isso no de CATEGORIA
+        // Olhar depois...
         [JsonIgnore]
         public string Ordem { get; set; }
         [JsonIgnore]

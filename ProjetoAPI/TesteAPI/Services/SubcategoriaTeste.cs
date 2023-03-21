@@ -31,6 +31,7 @@ namespace TesteAPI.Services
             });
             _mapper = _MapperConfiguration.CreateMapper();
         }
+
         [Fact]
         public void Cadastro_Valida_Criterios_Metodo()
         {
@@ -49,6 +50,7 @@ namespace TesteAPI.Services
             Assert.Equal(exDataCriacao, $"{subcategorias.DataCriacao:yyyy-MM-dd}");
             Assert.Equal(exStatus, subcategorias.Status);
         }
+
         [Fact]
         public void Cadastro_Verifica_Data_Criacao()
         {
@@ -64,6 +66,7 @@ namespace TesteAPI.Services
             //Assert
             Assert.Equal(exDataCriacao, $"{subcategorias.DataCriacao:yyyy-MM-dd}");
         }
+
         [Fact]
         public void Cadastro_Verifica_Status_True()
         {
@@ -77,6 +80,7 @@ namespace TesteAPI.Services
             //Assert
             Assert.Equal(200, resposta.StatusCode);
         }
+
         [Fact]
         public void Cadastro_Verifica_Status_False()
         {
@@ -90,6 +94,7 @@ namespace TesteAPI.Services
             //Assert
             Assert.Equal(400, resposta.StatusCode);
         }
+
         [Fact]
         public void Cadastro_200_Ok()
         {
@@ -105,6 +110,7 @@ namespace TesteAPI.Services
             Assert.Equal(200, resposta.StatusCode);
             Assert.NotNull(subcategorias);
         }
+
         [Fact]
         public void Cadastro_400_BadRequest()
         {
@@ -118,6 +124,7 @@ namespace TesteAPI.Services
             //Assert
             Assert.Equal(400, resposta.StatusCode);
         }
+
         [Fact]
         public void Cadastro_128Caracteres_200()
         {
@@ -140,6 +147,7 @@ namespace TesteAPI.Services
             //Assert
             Assert.Equal(200, resposta.StatusCode);
         }
+
         [Fact]
         public void Cadastro_128Caracteres_400()
         {
@@ -162,6 +170,7 @@ namespace TesteAPI.Services
             //Assert
             Assert.Equal(400, resposta.StatusCode);
         }
+
         [Fact]
         public void Cadastro_NullCaracteres_400()
         {
@@ -178,6 +187,7 @@ namespace TesteAPI.Services
             //Assert
             Assert.Equal(400, resposta.StatusCode);
         }
+
         [Fact]
         public void Cadastro_Categoria_Inativa_400()
         {

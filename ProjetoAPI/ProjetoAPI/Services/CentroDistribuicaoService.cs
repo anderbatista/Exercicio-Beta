@@ -22,26 +22,16 @@ namespace ProjetoAPI.Services
         private ISubcategoriaDao subcategoriaDao;
         private ICategoriaDao categoriaDao;
         private IProdutoDao produtoDao;
+        private ConsultaCepService consultaCepService;
 
-        public CentroDistribuicaoService(ICentroDistribuicaoDao cdao, ICategoriaDao dao, ISubcategoriaDao sdao, IProdutoDao pdao, IMapper mapper)
+        public CentroDistribuicaoService(ICentroDistribuicaoDao cdao, ICategoriaDao dao, ISubcategoriaDao sdao, IProdutoDao pdao, IMapper mapper, ConsultaCepService CepService)
         {
             _mapper = mapper;
             centroDao = cdao;
             subcategoriaDao = sdao;
             categoriaDao = dao;
             produtoDao = pdao;
-        }
-        public async Task<CentroDistribuicao> ConsultaEnderecoViaCep(string cep)
-        {
-            HttpClient client = new HttpClient();
-            string url = $"https://viacep.com.br/ws/{cep}/json/";
-
-            var solicitacaoApi = await client.GetAsync(url);
-            var retornoApi = await solicitacaoApi.Content.ReadAsStringAsync();
-
-            var endereco = JsonConvert.DeserializeObject<CentroDistribuicao>(retornoApi);
-
-            return endereco;
+            consultaCepService = CepService;
         }
         public async Task<Result> CadastrarCentro(CreateCentroDistribuicaoDto createCdDto)
         {
@@ -49,17 +39,25 @@ namespace ProjetoAPI.Services
             {
                 return Result.Fail("Impossível cadastrar Centro de Distruibuição com status inativo.");
             }
+
             var centroNome = centroDao.CentroPorNome(createCdDto.Nome);
             if (centroNome.Count > 0)
             {
-                return Result.Fail("Não foi possível cadastrar, este nome de CD já consta em nosso banco de dados.");
+                return Result.Fail("Não foi possível cadastrar, este nome de CD já consta no banco de dados.");
             }
-            var centroCep = centroDao.CentroPorCep(createCdDto.Cep);
-            if (centroCep.Count > 0)
+
+            var enderecoUnico = centroDao.EnderecoUnico(createCdDto.Logradouro, createCdDto.Numero, createCdDto.Complemento);
+            if (enderecoUnico == false)
             {
-                return Result.Fail("Logradouro já existente, favor verifique se está digitando corretamente.");
+                return Result.Fail("Endereço já cadastrado no banco de dados, favor verifique se está digitando corretamente.");
             }
-            var centro = await ConsultaEnderecoViaCep(createCdDto.Cep);
+
+            var centro = await consultaCepService.ConsultaEnderecoViaCep(createCdDto.Cep);
+            if (centro.Logradouro == null)
+            {
+                return Result.Fail("Não foi possível cadastrar endereço, verifique o CEP digitado.");
+            }
+
             var mapeamento = _mapper.Map<CreateCentroDistribuicaoDto>(createCdDto);
             mapeamento.Logradouro = centro.Logradouro;
             mapeamento.Bairro = centro.Bairro;
@@ -67,7 +65,6 @@ namespace ProjetoAPI.Services
             mapeamento.UF = centro.UF;
             var cdcadastrado = await centroDao.AddCentro(mapeamento);
             return Result.Ok();
-            //return cdcadastrado;
         }
         public async Task<Result> EditarCentro(UpdateCentroDistribuicaoDto centro)
         {
@@ -76,44 +73,62 @@ namespace ProjetoAPI.Services
             {
                 return Result.Fail("Centro de ditribuição não encontrado");
             }
+
             if (String.IsNullOrEmpty(centro.Cep))
             {
                 centro.Cep = cdBusca.Cep;
             }
-            var endereco = await ConsultaEnderecoViaCep(centro.Cep);
+
+            var endereco = await consultaCepService.ConsultaEnderecoViaCep(centro.Cep);
             if (endereco == null)
             {
                 return Result.Fail("CEP não encontrado");
             }
-            if (centroDao.CentroPorCep(centro.Cep).Count > 0)
+
+            if (centroDao.EnderecoUnico(endereco.Logradouro, centro.Numero, centro.Complemento) == false)
             {
-                return Result.Fail("Logradouro já existente");
+                return Result.Fail("Endereço já cadastrado no banco de dados, favor verifique se está digitando corretamente.");
             }
-            if (centroDao.CentroPorNome(centro.Nome).Count > 0)
+            
+            if (centroDao.PermiteAlteracaoDoCD(centro.Nome, centro.Id))
             {
-                return Result.Fail("Nome já está em uso, digite um nome diferente");
+                return centroDao.UpdateCentro(centro, centro.Id, endereco);
             }
-            if (centro.Status == false)
+            return Result.Fail("Nome já está em uso, digite um nome diferente");
+        }
+
+        public Result EditarStatusCentro(int id)
+        {
+            var cdBusca = centroDao.CentroPorId(id);            
+            if (cdBusca == null)
+            {
+                return Result.Fail("Centro de ditribuição não encontrado");
+            }
+            if (cdBusca.Status == true)
             {
                 var produtos = produtoDao.ListaProdutoPorIdCentro(cdBusca.Id);
                 if (produtos.Count == 0)
                 {
-                    if (centro.Cep != cdBusca.Cep)
-                    {
-                        return centroDao.UpdateCentro(centro, centro.Id, endereco);
-                    }
+                    cdBusca.Status = false;
+                    cdBusca.DataAlteracao = DateTime.Now;
+                    centroDao.SalvaAlteracao();
+                    return Result.Ok();
                 }
                 return Result.Fail("Não foi possível inativar, existe produtos associado");
             }
-            return centroDao.UpdateCentro(centro, centro.Id, endereco);
+            cdBusca.Status = true;
+            cdBusca.DataAlteracao = DateTime.Now;
+            centroDao.SalvaAlteracao();
+            return Result.Ok();
         }
+
         public async Task<int> DeletarCentro(ReadCentroDistribuicaoDto centro)
         {
             return await centroDao.DeletarCentro(centro);
         }
-        public async Task<List<ReadCentroDistribuicaoDto>> PesquisaCentroPersonalizada(ReadCentroDistribuicaoDto readCd)
+        public List<ReadCentroDistribuicaoDto> PesquisaCentroPersonalizada(ReadCentroDistribuicaoDto readCd)
         {
-            return await centroDao.PesquisaCentroPersonalizada(readCd);
+            return centroDao.PesquisaCentroPersonalizada(readCd);
         }
     }
 }

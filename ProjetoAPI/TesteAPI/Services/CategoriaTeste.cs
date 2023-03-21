@@ -21,6 +21,7 @@ namespace TesteAPI.Services
             categoriaDao = new Mock<ICategoriaDao>();
             subcategoriaDao = new Mock<ISubcategoriaDao>();
         }
+
         [Fact]
         public void Cadastrar_Valida_Criterios_Metodo()
         {
@@ -34,6 +35,7 @@ namespace TesteAPI.Services
             Assert.Equal(exDataCriacao, $"{resultado.DataCriacao:yyyy-MM-dd}");
             Assert.Equal(exStatus, resultado.Status);
         }
+
         [Fact]
         public void Cadastrar_Verifica_Data_Criacao()
         {
@@ -44,6 +46,7 @@ namespace TesteAPI.Services
             //Assert
             Assert.Equal(agora, $"{resultado.DataCriacao:yyyy-MM-dd}");
         }
+
         [Fact]
         public void Cadastrar_Verifica_Status_true()
         {
@@ -59,6 +62,7 @@ namespace TesteAPI.Services
             //Assert
             Assert.Equal(201, resposta.StatusCode);
         }
+
         [Fact]
         public void Cadastrar_Verifica_Status_false()
         {
@@ -74,6 +78,7 @@ namespace TesteAPI.Services
             //Assert
             Assert.Equal(400, resposta.StatusCode);
         }
+
         [Fact]
         public void Cadastrar__128Caracteres_201_Created()
         {
@@ -94,6 +99,7 @@ namespace TesteAPI.Services
             //Assert
             Assert.Equal(201, resposta.StatusCode);
         }
+
         [Fact]
         public void Cadastrar_Excede_Caracteres_400_BadRequest()
         {
@@ -114,6 +120,7 @@ namespace TesteAPI.Services
             //Assert
             Assert.Equal(400, resposta.StatusCode);
         }
+
         [Fact]
         public void Cadastrar_Caracteres_NuloOuVazio_400_BadRequest()
         {

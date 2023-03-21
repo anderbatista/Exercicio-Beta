@@ -3,15 +3,15 @@ using FluentResults;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
-using ProjetoAPI.Data.Dtos.ProdutoDto;
 using ProjetoAPI.Data.DTOs.CentroDistribuicaoDto;
 using ProjetoAPI.Data.Interfaces;
-using ProjetoAPI.Data.Repository;
 using ProjetoAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ProjetoAPI.Data.Dtos.ConsultaCepDto;
+
 
 namespace ProjetoAPI.Data.DAO
 {
@@ -40,15 +40,15 @@ namespace ProjetoAPI.Data.DAO
                 return createCdDto;
             }
         }
-        public Result UpdateCentro(UpdateCentroDistribuicaoDto updateCentro, int id, CentroDistribuicao endereco)
+        public Result UpdateCentro(UpdateCentroDistribuicaoDto updateCentro, int id, ReadConsultaCepDto endereco)
         {
             updateCentro.Logradouro = endereco.Logradouro;
             updateCentro.Bairro = endereco.Bairro;
             updateCentro.Localidade = endereco.Localidade;
             updateCentro.UF = endereco.UF;
 
-            var categoria = CentroPorId(id);
-            _mapper.Map(updateCentro, categoria);
+            var centroDistribuicao = CentroPorId(id);
+            _mapper.Map(updateCentro, centroDistribuicao);
             _context.SaveChanges();
             return Result.Ok();
         }
@@ -73,8 +73,7 @@ namespace ProjetoAPI.Data.DAO
         {
             return _context.CentrosD.FirstOrDefault(cd => cd.Id == id);
         }
-
-        public async Task<List<ReadCentroDistribuicaoDto>> PesquisaCentroPersonalizada(ReadCentroDistribuicaoDto readCd)
+        public List<ReadCentroDistribuicaoDto> PesquisaCentroPersonalizada(ReadCentroDistribuicaoDto readCd)
         {
             var sql = "SELECT * FROM CentrosD WHERE ";
             if (readCd.Id != null)
@@ -121,7 +120,7 @@ namespace ProjetoAPI.Data.DAO
             {
                 sql += "DATE_FORMAT(DataAlteracao ,'%d/%m/%Y') = @dataAlteracao and ";
             }
-            if (readCd.Id == null && readCd.Nome == null && readCd.Cep == null && readCd.Logradouro == null 
+            if (readCd.Id == null && readCd.Nome == null && readCd.Cep == null && readCd.Logradouro == null
                 && readCd.Numero == null && readCd.Complemento == null && readCd.Bairro == null && readCd.Localidade == null
                 && readCd.Uf == null && readCd.Status == null && readCd.DataCriacao == null && readCd.DataAlteracao == null)
             {
@@ -147,20 +146,20 @@ namespace ProjetoAPI.Data.DAO
             Console.WriteLine(sql);
             using (var conexao = new MySqlConnection(_config.GetConnectionString("CategoriaConnection")))
             {
-                var result = await conexao.QueryAsync<ReadCentroDistribuicaoDto>(sql, new
+                var result = conexao.Query<ReadCentroDistribuicaoDto>(sql, new
                 {
-                    Id = readCd.Id,
-                    Nome = readCd.Nome,
-                    Cep = readCd.Cep,
-                    Logradouro = readCd.Logradouro,
-                    Numero = readCd.Numero,
-                    Complemento = readCd.Complemento,
-                    Bairro = readCd.Bairro,
-                    Localidade = readCd.Localidade,
-                    Uf = readCd.Uf,
-                    Status = readCd.Status,
-                    DataCriacao = readCd.DataCriacao,
-                    DataAlteracao = readCd.DataAlteracao
+                    readCd.Id,
+                    readCd.Nome,
+                    readCd.Cep,
+                    readCd.Logradouro,
+                    readCd.Numero,
+                    readCd.Complemento,
+                    readCd.Bairro,
+                    readCd.Localidade,
+                    readCd.Uf,
+                    readCd.Status,
+                    readCd.DataCriacao,
+                    readCd.DataAlteracao
                 });
                 if (readCd.PgAtual > 0 && readCd.ItensPg > 0 && readCd.ItensPg <= 10)
                 {
@@ -171,20 +170,65 @@ namespace ProjetoAPI.Data.DAO
                 return resultadoNotPag;
             }
         }
+        public bool EnderecoUnico(string logradouro, int numero, string complemento)
+        {
+            string enderecoComparacao = logradouro;
+            enderecoComparacao += numero;
+            enderecoComparacao += complemento;
 
-        //public async Task<ReadCentroDistribuicaoDto> EnderecoUnicoQuerry(string logradouro, int? numero, string complemento)
-        //{
-        //    var sql = "SELECT * FROM CentrosD WHERE Logradouro LIKE \"%" + logradouro + "%\" and " +
-        //        "Numero = @numero and Complemento LIKE \"%" + complemento + "%\"";
+            ReadCentroDistribuicaoDto filtro = new ReadCentroDistribuicaoDto();
+            List<ReadCentroDistribuicaoDto> listaCD = PesquisaCentroPersonalizada(filtro);
 
-        //    Console.WriteLine(sql);
-        //    using (var conexao = new MySqlConnection(_config.GetConnectionString("CategoriaConnection")))
-        //    {
-        //        var result = await conexao.QuerySingleAsync<ReadCentroDistribuicaoDto>(sql);
+            foreach (var retorno in listaCD)
+            {
+                string enderecoRetorno = retorno.Logradouro;
+                enderecoRetorno += retorno.Numero;
+                enderecoRetorno += retorno.Complemento;
 
-        //        return result;
-        //    }
-        //}
+                if (enderecoRetorno == enderecoComparacao)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public bool PermiteAlteracaoDoCD(string nome, int id)
+        {
+            string centroComparacao = nome;
+            centroComparacao += id;
+
+            string centroComparacaoNome = nome;
+
+            ReadCentroDistribuicaoDto filtro = new ReadCentroDistribuicaoDto();
+            List<ReadCentroDistribuicaoDto> listaCD = PesquisaCentroPersonalizada(filtro);
+
+            //Busca se o nome e igual o ID
+            foreach (var retorno in listaCD)
+            {
+                string centroRetorno = retorno.Nome;
+                centroRetorno += retorno.Id;
+
+                if (centroRetorno == centroComparacao)
+                {
+                    return true;
+                }
+            }
+            //Busca se o nome se consta no banco
+            foreach (var retorno in listaCD)
+            {
+                string centroRetono = retorno.Nome;
+
+                if (centroRetono == centroComparacaoNome)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public void SalvaAlteracao()
+        {
+            _context.SaveChanges();
+        }
 
     }
 }

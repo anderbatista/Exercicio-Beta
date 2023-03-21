@@ -1,13 +1,7 @@
-﻿using System;
-using System.Linq;
-using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
-using ProjetoAPI.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using ProjetoAPI.Data.Dtos.CategoriaDto;
 using ProjetoAPI.Data.Dtos.SubcategoriaDto;
-using ProjetoAPI.Data;
 using ProjetoAPI.Services;
-using FluentResults;
-using ProjetoAPI.Data.Repository;
 
 namespace ProjetoAPI.Controllers
 {
@@ -20,6 +14,7 @@ namespace ProjetoAPI.Controllers
         {
             this.subcategoriaService = subcategoriaService;
         }
+
         [HttpPost]
         public IActionResult CadastrarSubcategorias([FromBody] CreateSubcategoriaDto subcategoriaDto)
         {
@@ -28,13 +23,19 @@ namespace ProjetoAPI.Controllers
             if (subcategoriaDto.Nome.Length > 128 || subcategoriaDto.Nome == string.Empty) return StatusCode(400);
             return Ok(resultadoSubcategoria);
         }
+
         [HttpGet("buscar")]
-        public IActionResult PesquisaSubcategoria([FromQuery] string nome, [FromQuery] bool? status, [FromQuery] string ordem, [FromQuery] int paginas, [FromQuery] int itens)
+        public IActionResult PesquisaSubcategoria([FromQuery] ReadSubcategoriaDto readSub,
+            [FromQuery] string ordem, [FromQuery] int itensPg, [FromQuery] int pgAtual)
         {
-            var resultado = subcategoriaService.PesquisaPersonaizadaSubcategoria(nome, status, ordem, paginas, itens);
-            if (resultado == null) return BadRequest("Favor digitar mais de 3 caracteres.");
-            return Ok(resultado);
+            var result = subcategoriaService.PesquisaPersonaizadaSubcategoria(readSub, ordem, itensPg, pgAtual);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
         }
+
         [HttpPut("editar/{id}")]
         public IActionResult EditarSubcategoria(int id, [FromBody] UpdateSubcategoriaDto novoNomeDto)
         {
@@ -42,6 +43,7 @@ namespace ProjetoAPI.Controllers
             if (resultado == false) return BadRequest("Impossível alterar.");
             return Ok("Editado com sucesso.");
         }
+
         [HttpDelete("{id}")]
         public IActionResult DeletaSubategoria(int id)
         {

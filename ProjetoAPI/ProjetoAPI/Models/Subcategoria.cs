@@ -19,7 +19,6 @@ namespace ProjetoAPI.Models
         public DateTime? DataAlteracao { get; set; }
         public virtual Categoria Categoria { get; set; }
         public int CategoriaId { get; set; }
-        [JsonIgnore]
         public virtual List<Produto> Produtos { get; set; }
     }
 }
