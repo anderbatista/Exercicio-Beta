@@ -1,0 +1,735 @@
+2023-03-24 21:04:17.880 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:04:19.246 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:04:19.248 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:04:19.248 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:04:19.248 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:04:19.248 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:04:19.733 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:04:19.918 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 191.8138ms
+2023-03-24 21:04:19.919 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:04:19.925 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:04:19.925 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 5.8672ms
+2023-03-24 21:04:19.950 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.2719ms
+2023-03-24 21:04:20.007 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:04:20.094 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 83.6494ms
+2023-03-24 21:04:30.192 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:04:30.196 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 3.2418ms
+2023-03-24 21:04:30.207 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:04:30.242 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:04:30.262 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:04:30.653 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:04:30.699 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 434.395ms
+2023-03-24 21:04:30.700 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:04:30.700 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 493.0006ms
+2023-03-24 21:06:59.040 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:07:00.273 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:07:00.276 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:07:00.276 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:07:00.276 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:07:00.276 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:07:00.878 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:07:01.073 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:07:01.073 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:07:01.074 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 197.6687ms
+2023-03-24 21:07:01.076 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.1299ms
+2023-03-24 21:07:01.091 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.6207ms
+2023-03-24 21:07:01.188 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:07:01.320 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 132.1987ms
+2023-03-24 21:07:09.371 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:07:09.375 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 3.2067ms
+2023-03-24 21:07:09.384 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:07:09.410 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:07:09.435 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:07:09.855 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:07:09.897 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 457.4713ms
+2023-03-24 21:07:09.897 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:07:09.899 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 514.2397ms
+2023-03-24 21:07:27.437 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:07:27.438 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 0.2461ms
+2023-03-24 21:07:27.443 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:07:27.444 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:07:27.444 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:07:27.445 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:07:27.446 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 1.4058ms
+2023-03-24 21:07:27.446 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:07:27.446 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 3.1079ms
+2023-03-24 21:07:45.890 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:07:47.079 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:07:47.080 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:07:47.080 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:07:47.080 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:07:47.080 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:07:47.597 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:07:47.806 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:07:47.808 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 211.5542ms
+2023-03-24 21:07:47.808 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:07:47.810 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.8442ms
+2023-03-24 21:07:47.821 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.1066ms
+2023-03-24 21:07:47.890 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:07:47.993 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 103.3039ms
+2023-03-24 21:07:50.733 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:07:50.736 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 3.8764ms
+2023-03-24 21:07:50.743 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:07:50.770 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:07:50.793 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:07:51.201 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:07:51.243 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 446.3367ms
+2023-03-24 21:07:51.243 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:07:51.245 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 501.9626ms
+2023-03-24 21:08:47.939 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:08:49.138 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:08:49.139 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:08:49.139 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:08:49.139 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:08:49.139 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:08:49.853 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:08:50.061 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:08:50.062 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:08:50.064 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 213.1421ms
+2023-03-24 21:08:50.066 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 5.4648ms
+2023-03-24 21:08:50.077 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.7813ms
+2023-03-24 21:08:50.141 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:08:50.245 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 104.1531ms
+2023-03-24 21:08:53.627 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 51
+2023-03-24 21:08:53.631 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 51 - 307 0 - 3.4646ms
+2023-03-24 21:08:53.647 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 51
+2023-03-24 21:08:53.675 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:08:53.699 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:08:56.572 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 2867.3128ms
+2023-03-24 21:08:56.573 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:08:56.625 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 51 - 500 - application/json 2977.9505ms
+2023-03-24 21:12:35.003 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 51
+2023-03-24 21:12:35.003 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 51 - 307 0 - 0.3320ms
+2023-03-24 21:12:35.011 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 51
+2023-03-24 21:12:35.013 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:12:35.014 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:12:41.548 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 6531.9884ms
+2023-03-24 21:12:41.549 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:12:41.571 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 51 - 500 - application/json 6560.2704ms
+2023-03-24 21:13:59.096 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:14:00.406 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:14:00.407 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:14:00.407 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:14:00.407 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:14:00.407 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:14:01.083 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:14:01.227 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:14:01.227 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:14:01.229 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 147.5853ms
+2023-03-24 21:14:01.230 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 2.7938ms
+2023-03-24 21:14:01.248 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.2635ms
+2023-03-24 21:14:01.313 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:14:01.387 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 74.4920ms
+2023-03-24 21:14:08.926 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 51
+2023-03-24 21:14:08.929 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 51 - 307 0 - 2.6485ms
+2023-03-24 21:14:08.937 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 51
+2023-03-24 21:14:08.959 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:14:08.998 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:14:14.360 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 5358.2408ms
+2023-03-24 21:14:14.362 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:14:14.414 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 51 - 500 - application/json 5476.4459ms
+2023-03-24 21:15:51.931 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:15:53.080 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:15:53.082 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:15:53.082 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:15:53.082 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:15:53.082 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:15:53.481 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:15:53.629 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:15:53.630 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 150.0288ms
+2023-03-24 21:15:53.634 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.9146ms
+2023-03-24 21:15:53.637 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:15:53.654 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.7694ms
+2023-03-24 21:15:53.730 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:15:53.804 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.2850ms
+2023-03-24 21:16:08.379 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 51
+2023-03-24 21:16:08.382 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 51 - 307 0 - 3.7163ms
+2023-03-24 21:16:08.389 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 51
+2023-03-24 21:16:08.414 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:16:08.434 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:16:08.860 -03:00 [INF] #### Foi requisitado a inserção de uma nova categoria. ####
+2023-03-24 21:16:09.516 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-03-24 21:16:09.877 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataAlteracao`, `DataCriacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2023-03-24 21:16:09.905 -03:00 [INF] #### Tempo de adição de uma nova Categoria. completed in 1044.7 ms
+2023-03-24 21:16:09.912 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto'.
+2023-03-24 21:16:09.959 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 1520.9984ms
+2023-03-24 21:16:09.959 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:16:09.962 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 51 - 201 83 application/json;+charset=utf-8 1573.9054ms
+2023-03-24 21:16:26.984 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:16:26.985 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 0.3149ms
+2023-03-24 21:16:26.991 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:16:26.994 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:16:26.995 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:16:26.997 -03:00 [INF] #### Foi requisitado a inserção de uma nova categoria. ####
+2023-03-24 21:16:27.019 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-03-24 21:16:27.023 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataAlteracao`, `DataCriacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2023-03-24 21:16:27.027 -03:00 [INF] #### Tempo de adição de uma nova Categoria. completed in 30.0 ms
+2023-03-24 21:16:27.027 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto'.
+2023-03-24 21:16:27.029 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 33.3395ms
+2023-03-24 21:16:27.029 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:16:27.029 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 201 86 application/json;+charset=utf-8 38.6870ms
+2023-03-24 21:18:35.044 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:18:36.275 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:18:36.276 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:18:36.276 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:18:36.277 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:18:36.277 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:18:36.675 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:18:36.811 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:18:36.812 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 138.0759ms
+2023-03-24 21:18:36.812 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:18:36.817 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 5.3999ms
+2023-03-24 21:18:36.848 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 36.0762ms
+2023-03-24 21:18:36.904 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:18:36.979 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 75.4501ms
+2023-03-24 21:18:39.142 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:18:39.146 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 4.2147ms
+2023-03-24 21:18:39.155 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:18:39.178 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:18:39.198 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:18:39.601 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:18:39.644 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 441.3592ms
+2023-03-24 21:18:39.644 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:18:39.644 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 489.2906ms
+2023-03-24 21:18:57.394 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:18:57.395 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 0.3595ms
+2023-03-24 21:18:57.405 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:18:57.408 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:18:57.409 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:18:57.410 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:18:57.411 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 1.7936ms
+2023-03-24 21:18:57.411 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:18:57.411 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 6.0757ms
+2023-03-24 21:19:14.855 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:19:14.856 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 0.2629ms
+2023-03-24 21:19:14.861 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:19:14.861 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:19:14.861 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:19:21.337 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:19:21.337 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 6475.4612ms
+2023-03-24 21:19:21.337 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:19:31.215 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 16353.3579ms
+2023-03-24 21:19:39.569 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:19:39.570 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 1.2349ms
+2023-03-24 21:19:39.577 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:19:39.577 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:19:39.577 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:19:43.527 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:19:43.527 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 3950.1434ms
+2023-03-24 21:19:43.527 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:20:19.565 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 39987.7489ms
+2023-03-24 21:21:11.702 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:21:11.702 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 0.2545ms
+2023-03-24 21:21:11.705 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:21:11.705 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:26:54.054 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:26:55.391 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:26:55.392 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:26:55.392 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:26:55.392 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:26:55.392 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:26:55.775 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:26:55.986 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:26:55.987 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 213.9989ms
+2023-03-24 21:26:55.998 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 11.4904ms
+2023-03-24 21:26:56.002 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:26:56.022 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.6278ms
+2023-03-24 21:26:56.096 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:26:56.181 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 84.3771ms
+2023-03-24 21:27:02.131 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:27:02.135 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 3.8765ms
+2023-03-24 21:27:02.153 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:27:02.154 -03:00 [ERR] #### Nâo aceito pela validação de nome
+2023-03-24 21:27:02.180 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:27:02.203 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:28:08.505 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:28:09.627 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:28:09.628 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:28:09.628 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:28:09.628 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:28:09.628 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:28:10.108 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:28:10.285 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:28:10.286 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 179.4595ms
+2023-03-24 21:28:10.287 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:28:10.288 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.4852ms
+2023-03-24 21:28:10.304 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.6718ms
+2023-03-24 21:28:10.368 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:28:10.451 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 82.7736ms
+2023-03-24 21:28:15.382 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:28:15.385 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 3.2758ms
+2023-03-24 21:28:15.392 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:28:15.393 -03:00 [ERR] #### Microsoft.AspNetCore.Http.DefaultHttpContext
+2023-03-24 21:28:15.417 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:28:15.438 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:28:20.099 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:28:20.143 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 4702.3796ms
+2023-03-24 21:28:20.143 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:28:20.144 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 4752.1635ms
+2023-03-24 21:31:01.911 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:31:03.162 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:31:03.163 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:31:03.163 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:31:03.163 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:31:03.163 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:31:03.760 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:31:03.910 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 153.5453ms
+2023-03-24 21:31:03.912 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:31:03.912 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:31:03.915 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 2.9796ms
+2023-03-24 21:31:03.928 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.7118ms
+2023-03-24 21:31:04.002 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:31:04.113 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 110.1904ms
+2023-03-24 21:31:12.095 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 797
+2023-03-24 21:31:12.099 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 797 - 307 0 - 3.1812ms
+2023-03-24 21:31:12.107 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 797
+2023-03-24 21:31:12.109 -03:00 [ERR] #### Microsoft.AspNetCore.Http.DefaultHttpContext
+2023-03-24 21:31:12.135 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:31:12.157 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:31:12.620 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:31:12.686 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 522.8622ms
+2023-03-24 21:31:12.686 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:31:12.687 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 797 - 400 251 application/problem+json;+charset=utf-8 579.9487ms
+2023-03-24 21:32:21.203 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:32:22.364 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:32:22.366 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:32:22.366 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:32:22.366 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:32:22.366 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:32:22.851 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:32:23.053 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 203.0099ms
+2023-03-24 21:32:23.063 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:32:23.063 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:32:23.068 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.6129ms
+2023-03-24 21:32:23.087 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 23.5685ms
+2023-03-24 21:32:23.157 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:32:23.268 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 111.0075ms
+2023-03-24 21:32:26.606 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 797
+2023-03-24 21:32:26.609 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 797 - 307 0 - 2.8060ms
+2023-03-24 21:32:26.618 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 797
+2023-03-24 21:32:26.619 -03:00 [ERR] #### Microsoft.AspNetCore.Http.DefaultHttpResponse
+2023-03-24 21:32:26.641 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:32:26.662 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:32:27.092 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:32:27.139 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 473.5759ms
+2023-03-24 21:32:27.139 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:32:27.140 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 797 - 400 251 application/problem+json;+charset=utf-8 521.9246ms
+2023-03-24 21:32:45.376 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 797
+2023-03-24 21:32:45.376 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 797 - 307 0 - 0.3704ms
+2023-03-24 21:32:45.384 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 797
+2023-03-24 21:32:45.384 -03:00 [ERR] #### Microsoft.AspNetCore.Http.DefaultHttpResponse
+2023-03-24 21:32:45.386 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:32:45.386 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:32:49.630 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:32:49.631 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 4244.4735ms
+2023-03-24 21:32:49.631 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:34:29.833 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 797 - 400 251 application/problem+json;+charset=utf-8 104448.6389ms
+2023-03-24 21:34:59.507 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:34:59.508 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 0.3330ms
+2023-03-24 21:34:59.514 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:34:59.514 -03:00 [ERR] #### Microsoft.AspNetCore.Http.DefaultHttpResponse
+2023-03-24 21:34:59.514 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:34:59.514 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:35:01.611 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:35:01.611 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 2096.5329ms
+2023-03-24 21:35:01.611 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:35:01.611 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 2097.0233ms
+2023-03-24 21:37:08.504 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:37:09.670 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:37:09.672 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:37:09.672 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:37:09.672 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:37:09.672 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:37:10.111 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:37:10.282 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:37:10.283 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 175.1507ms
+2023-03-24 21:37:10.286 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.9118ms
+2023-03-24 21:37:10.288 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:37:10.303 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.9507ms
+2023-03-24 21:37:10.378 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:37:10.470 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 92.4480ms
+2023-03-24 21:37:15.544 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:37:15.549 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 4.9803ms
+2023-03-24 21:37:15.562 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:37:15.565 -03:00 [ERR] #### Result: IsSuccess='True', Value='Microsoft.AspNetCore.Http.DefaultHttpContext'
+2023-03-24 21:37:15.590 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:37:15.612 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:37:17.862 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:37:17.937 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 2320.1638ms
+2023-03-24 21:37:17.938 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:37:17.938 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 2376.5070ms
+2023-03-24 21:39:02.193 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:39:03.540 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:39:03.542 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:39:03.542 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:39:03.542 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:39:03.542 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:39:03.919 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:39:04.096 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 180.7752ms
+2023-03-24 21:39:04.099 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:39:04.103 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:39:04.105 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 6.7103ms
+2023-03-24 21:39:04.117 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.1059ms
+2023-03-24 21:39:04.211 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:39:04.344 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 132.8143ms
+2023-03-24 21:39:04.625 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:39:04.628 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 2.6744ms
+2023-03-24 21:39:04.640 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:39:04.641 -03:00 [ERR] #### 200
+2023-03-24 21:39:04.667 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:39:04.691 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:39:09.774 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:39:09.830 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 5134.6952ms
+2023-03-24 21:39:09.830 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:39:09.832 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 5191.2328ms
+2023-03-24 21:40:15.245 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:40:16.385 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:40:16.386 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:40:16.386 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:40:16.386 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:40:16.387 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:40:16.833 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:40:17.013 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:40:17.013 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:40:17.014 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 182.2801ms
+2023-03-24 21:40:17.016 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 2.7846ms
+2023-03-24 21:40:17.026 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.3248ms
+2023-03-24 21:40:17.095 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:40:17.179 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 84.7133ms
+2023-03-24 21:40:40.438 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 54
+2023-03-24 21:40:40.442 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 54 - 307 0 - 4.1478ms
+2023-03-24 21:40:40.456 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 54
+2023-03-24 21:40:40.457 -03:00 [ERR] #### Problema na validação da inserção dos dados. 
+2023-03-24 21:40:40.482 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:40:40.502 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:40:50.338 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:40:50.385 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 9880.2268ms
+2023-03-24 21:40:50.385 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:40:50.386 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 54 - 400 264 application/problem+json;+charset=utf-8 9929.5426ms
+2023-03-24 21:41:01.482 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 51
+2023-03-24 21:41:01.482 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 51 - 307 0 - 0.2973ms
+2023-03-24 21:41:01.490 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 51
+2023-03-24 21:41:01.490 -03:00 [ERR] #### Problema na validação da inserção dos dados. 
+2023-03-24 21:41:01.492 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:41:01.492 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:41:04.083 -03:00 [INF] #### Foi requisitado a inserção de uma nova categoria. ####
+2023-03-24 21:41:17.273 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-03-24 21:41:17.635 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataAlteracao`, `DataCriacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2023-03-24 21:41:17.692 -03:00 [INF] #### Tempo de adição de uma nova Categoria. completed in 13607.5 ms
+2023-03-24 21:41:17.694 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto'.
+2023-03-24 21:41:17.720 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 16227.6317ms
+2023-03-24 21:41:17.720 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:41:17.723 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 51 - 201 83 application/json;+charset=utf-8 16233.0866ms
+2023-03-24 21:41:23.421 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 51
+2023-03-24 21:41:23.421 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 51 - 307 0 - 0.2351ms
+2023-03-24 21:41:23.425 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 51
+2023-03-24 21:41:23.425 -03:00 [ERR] #### Problema na validação da inserção dos dados. 
+2023-03-24 21:41:23.425 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:41:23.425 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:41:23.428 -03:00 [INF] #### Foi requisitado a inserção de uma nova categoria. ####
+2023-03-24 21:41:23.447 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-03-24 21:41:23.451 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataAlteracao`, `DataCriacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2023-03-24 21:41:23.456 -03:00 [INF] #### Tempo de adição de uma nova Categoria. completed in 28.5 ms
+2023-03-24 21:41:23.457 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto'.
+2023-03-24 21:41:23.457 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 32.3086ms
+2023-03-24 21:41:23.458 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:41:23.458 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 51 - 201 83 application/json;+charset=utf-8 33.2249ms
+2023-03-24 21:41:30.031 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 51
+2023-03-24 21:41:30.031 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 51 - 307 0 - 0.2329ms
+2023-03-24 21:41:30.033 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 51
+2023-03-24 21:41:30.033 -03:00 [ERR] #### Problema na validação da inserção dos dados. 
+2023-03-24 21:41:30.033 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:41:30.033 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:41:30.033 -03:00 [INF] #### Foi requisitado a inserção de uma nova categoria. ####
+2023-03-24 21:41:30.040 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-03-24 21:41:30.043 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataAlteracao`, `DataCriacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2023-03-24 21:41:30.045 -03:00 [INF] #### Tempo de adição de uma nova Categoria. completed in 11.7 ms
+2023-03-24 21:41:30.045 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto'.
+2023-03-24 21:41:30.045 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 12.4555ms
+2023-03-24 21:41:30.045 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:41:30.046 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 51 - 201 83 application/json;+charset=utf-8 12.9126ms
+2023-03-24 21:41:45.772 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 21:41:47.029 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 21:41:47.030 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 21:41:47.030 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 21:41:47.030 -03:00 [INF] Hosting environment: Development
+2023-03-24 21:41:47.030 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 21:41:47.689 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 21:41:47.856 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 168.5870ms
+2023-03-24 21:41:47.859 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 21:41:47.859 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 21:41:47.864 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.5655ms
+2023-03-24 21:41:47.888 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.3247ms
+2023-03-24 21:41:47.983 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 21:41:48.094 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 110.9727ms
+2023-03-24 21:41:54.147 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 51
+2023-03-24 21:41:54.150 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 51 - 307 0 - 3.0993ms
+2023-03-24 21:41:54.161 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 51
+2023-03-24 21:41:54.162 -03:00 [ERR] #### Problema na validação da inserção dos dados. 
+2023-03-24 21:41:54.186 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:41:54.208 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:41:54.600 -03:00 [INF] #### Foi requisitado a inserção de uma nova categoria. ####
+2023-03-24 21:41:55.234 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-03-24 21:41:55.602 -03:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataAlteracao`, `DataCriacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2023-03-24 21:41:55.632 -03:00 [INF] #### Tempo de adição de uma nova Categoria. completed in 1031.0 ms
+2023-03-24 21:41:55.638 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto'.
+2023-03-24 21:41:55.689 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 1476.2117ms
+2023-03-24 21:41:55.689 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:41:55.693 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 51 - 201 83 application/json;+charset=utf-8 1532.3050ms
+2023-03-24 21:42:32.459 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 53
+2023-03-24 21:42:32.460 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 53 - 307 0 - 1.2993ms
+2023-03-24 21:42:32.466 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 53
+2023-03-24 21:42:32.466 -03:00 [ERR] #### Problema na validação da inserção dos dados. 
+2023-03-24 21:42:32.467 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:42:32.467 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:42:32.469 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:42:32.500 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 32.0307ms
+2023-03-24 21:42:32.500 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:42:32.500 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 53 - 400 264 application/problem+json;+charset=utf-8 33.7632ms
+2023-03-24 21:43:18.513 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 53
+2023-03-24 21:43:18.513 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 53 - 307 0 - 0.3564ms
+2023-03-24 21:43:18.520 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 53
+2023-03-24 21:43:18.520 -03:00 [ERR] #### Problema na validação da inserção dos dados. 
+2023-03-24 21:43:18.520 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:43:18.520 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 21:43:23.944 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 21:43:23.944 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 5423.5126ms
+2023-03-24 21:43:23.944 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 21:43:31.319 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 53 - 400 264 application/problem+json;+charset=utf-8 12799.2515ms
+2023-03-24 22:32:31.227 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 22:32:32.336 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 22:32:32.338 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 22:32:32.338 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 22:32:32.339 -03:00 [INF] Hosting environment: Development
+2023-03-24 22:32:32.339 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 22:32:32.915 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 22:32:33.424 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 22:32:33.425 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 512.4183ms
+2023-03-24 22:32:33.435 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 11.2674ms
+2023-03-24 22:32:33.437 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 22:32:33.527 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 89.7334ms
+2023-03-24 22:32:33.578 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 22:32:33.709 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 130.9326ms
+2023-03-24 22:32:45.580 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 57
+2023-03-24 22:32:45.584 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 57 - 307 0 - 3.1892ms
+2023-03-24 22:32:45.602 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 57
+2023-03-24 22:32:45.627 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 22:32:45.647 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 22:32:46.050 -03:00 [INF] #### Foi requisitado a inserção de uma nova categoria. ####
+2023-03-24 22:32:46.833 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-03-24 22:32:47.193 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataAlteracao`, `DataCriacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2023-03-24 22:32:47.228 -03:00 [INF] #### Tempo de adição de uma nova Categoria. completed in 1176.7 ms
+2023-03-24 22:32:47.238 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto'.
+2023-03-24 22:32:47.290 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 1639.7125ms
+2023-03-24 22:32:47.290 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 22:32:47.293 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 57 - 201 89 application/json;+charset=utf-8 1690.9705ms
+2023-03-24 22:32:54.974 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 60
+2023-03-24 22:32:54.974 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 60 - 307 0 - 0.3291ms
+2023-03-24 22:32:54.979 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 60
+2023-03-24 22:32:54.981 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 22:32:54.981 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 22:32:54.984 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 22:32:55.013 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 32.1128ms
+2023-03-24 22:32:55.013 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 22:32:55.013 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 60 - 400 264 application/problem+json;+charset=utf-8 34.5849ms
+2023-03-24 22:34:47.594 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 22:34:48.985 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 22:34:48.987 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 22:34:48.987 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 22:34:48.987 -03:00 [INF] Hosting environment: Development
+2023-03-24 22:34:48.987 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 22:34:49.551 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 22:34:49.699 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 149.2882ms
+2023-03-24 22:34:49.699 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 22:34:49.703 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.0671ms
+2023-03-24 22:34:49.704 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 22:34:49.757 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 52.8233ms
+2023-03-24 22:34:49.810 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 22:34:49.916 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 105.8594ms
+2023-03-24 22:34:54.630 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 60
+2023-03-24 22:34:54.633 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 60 - 307 0 - 3.3691ms
+2023-03-24 22:34:54.646 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 60
+2023-03-24 22:34:54.671 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 22:34:54.696 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 22:34:59.966 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 22:35:00.021 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 5318.4325ms
+2023-03-24 22:35:00.021 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 22:35:37.316 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 60 - 400 264 application/problem+json;+charset=utf-8 42669.5804ms
+2023-03-24 22:35:41.352 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 60
+2023-03-24 22:35:41.352 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 60 - 307 0 - 0.2593ms
+2023-03-24 22:35:41.361 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 60
+2023-03-24 22:35:41.363 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 22:35:41.363 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 23:04:47.941 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 23:04:49.143 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 23:04:49.144 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 23:04:49.144 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 23:04:49.144 -03:00 [INF] Hosting environment: Development
+2023-03-24 23:04:49.144 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 23:04:49.619 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 23:04:49.799 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 182.5314ms
+2023-03-24 23:04:49.816 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 23:04:49.816 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 23:04:49.819 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.0615ms
+2023-03-24 23:04:49.909 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 93.1950ms
+2023-03-24 23:04:49.960 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 23:04:50.034 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.5179ms
+2023-03-24 23:04:55.030 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 60
+2023-03-24 23:04:55.033 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 60 - 307 0 - 3.0185ms
+2023-03-24 23:04:55.043 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 60
+2023-03-24 23:04:55.068 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 23:04:55.094 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 23:04:55.502 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 23:04:55.556 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 456.0155ms
+2023-03-24 23:04:55.556 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 23:04:55.557 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 60 - 400 264 application/problem+json;+charset=utf-8 513.9699ms
+2023-03-24 23:05:26.514 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 60
+2023-03-24 23:05:26.514 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 60 - 307 0 - 0.2485ms
+2023-03-24 23:05:26.519 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 60
+2023-03-24 23:05:26.520 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 23:05:26.520 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 23:05:31.092 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 23:05:31.093 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 4572.8947ms
+2023-03-24 23:05:31.094 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 23:05:33.945 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 60 - 400 264 application/problem+json;+charset=utf-8 7426.1384ms
+2023-03-24 23:07:55.970 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-03-24 23:07:57.161 -03:00 [INF] Now listening on: https://localhost:5001
+2023-03-24 23:07:57.163 -03:00 [INF] Now listening on: http://localhost:5000
+2023-03-24 23:07:57.164 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-24 23:07:57.164 -03:00 [INF] Hosting environment: Development
+2023-03-24 23:07:57.164 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-03-24 23:07:57.555 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-03-24 23:07:57.760 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 209.6507ms
+2023-03-24 23:07:57.771 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-03-24 23:07:57.771 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-03-24 23:07:57.774 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.1089ms
+2023-03-24 23:07:57.803 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.9021ms
+2023-03-24 23:07:57.906 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-03-24 23:07:58.012 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 106.8494ms
+2023-03-24 23:08:00.987 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 60
+2023-03-24 23:08:00.990 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 60 - 307 0 - 2.9112ms
+2023-03-24 23:08:01.003 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 60
+2023-03-24 23:08:01.035 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 23:08:01.057 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-03-24 23:08:03.939 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-24 23:08:03.992 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 2928.7501ms
+2023-03-24 23:08:03.992 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-03-24 23:08:06.902 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 60 - 400 264 application/problem+json;+charset=utf-8 5898.7849ms

@@ -1,0 +1,832 @@
+2023-04-10 09:25:10.174 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-04-10 09:25:23.642 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-10 09:25:23.650 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-10 09:25:23.652 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-10 09:25:23.652 -03:00 [INF] Hosting environment: Development
+2023-04-10 09:25:23.652 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-04-10 09:25:26.882 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-10 09:25:27.823 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-10 09:25:27.960 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-10 09:25:27.984 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 966.0462ms
+2023-04-10 09:25:28.007 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 7.1503ms
+2023-04-10 09:25:28.193 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 233.8116ms
+2023-04-10 09:25:28.503 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-10 09:25:28.923 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 420.7280ms
+2023-04-10 09:26:08.973 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 51
+2023-04-10 09:26:08.991 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 51 - 307 0 - 18.6182ms
+2023-04-10 09:26:09.068 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 51
+2023-04-10 09:26:09.197 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-04-10 09:26:09.308 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-10 09:26:13.695 -03:00 [INF] #### POST - Inserção de uma nova categoria. ####
+2023-04-10 09:26:13.697 -03:00 [INF] #### Service - Inserção de uma nova categoria. ####
+2023-04-10 09:26:16.658 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:26:18.415 -03:00 [INF] Executed DbCommand (34ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataAlteracao`, `DataCriacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2023-04-10 09:26:18.540 -03:00 [INF] #### Repository - Inserção de uma nova categoria. ####
+2023-04-10 09:26:18.641 -03:00 [INF] #### Requisição -> {"Nome":"TesteLog","DataCriacao":"2023-04-10T09:26:13.5753693-03:00","Status":true}. ####
+2023-04-10 09:26:18.648 -03:00 [INF] #### Tempo de adição de uma nova Categoria. completed in 4947.2 ms
+2023-04-10 09:26:18.670 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto'.
+2023-04-10 09:26:18.811 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 9496.6451ms
+2023-04-10 09:26:18.811 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-04-10 09:26:18.819 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 51 - 201 83 application/json;+charset=utf-8 9750.6368ms
+2023-04-10 09:26:26.958 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/categoria/buscar - -
+2023-04-10 09:26:26.962 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-10 09:26:26.973 -03:00 [INF] Route matched with {action = "PesquisaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoria(ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-10 09:26:26.994 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:26:26.995 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:26:27.391 -03:00 [INF] #### Repository - Busca personalizada de categoria. ####
+2023-04-10 09:26:27.391 -03:00 [INF] #### Tempo do método buscar Categoria. completed in 396.8 ms
+2023-04-10 09:26:27.392 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:26:27.443 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI) in 469.7344ms
+2023-04-10 09:26:27.443 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-10 09:26:27.443 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/categoria/buscar - - - 200 1551 application/json;+charset=utf-8 486.1293ms
+2023-04-10 09:26:32.423 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/categoria/buscar?itensPg=20 - -
+2023-04-10 09:26:32.441 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-10 09:26:32.441 -03:00 [INF] Route matched with {action = "PesquisaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoria(ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-10 09:26:32.467 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:26:32.467 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:26:32.473 -03:00 [INF] #### Repository - Busca personalizada de categoria. ####
+2023-04-10 09:26:32.473 -03:00 [INF] #### Tempo do método buscar Categoria. completed in 6.3 ms
+2023-04-10 09:26:32.473 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:26:32.474 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI) in 33.2793ms
+2023-04-10 09:26:32.474 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-10 09:26:32.475 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/categoria/buscar?itensPg=20 - - - 200 1551 application/json;+charset=utf-8 51.8845ms
+2023-04-10 09:27:29.231 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/categoria/editar/18 application/json 58
+2023-04-10 09:27:29.232 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI)'
+2023-04-10 09:27:29.237 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarCategoria(Int32, ProjetoAPI.Data.Dtos.CategoriaDto.UpdateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-10 09:27:29.247 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:27:29.335 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-10 09:27:29.434 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:27:30.108 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:27:30.150 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__id_0
+2023-04-10 09:27:30.151 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-10 09:27:30.162 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:27:30.193 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 128), @p2='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Categorias` SET `DataAlteracao` = @p0, `Nome` = @p1, `Status` = @p2
+WHERE `Id` = @p3;
+SELECT ROW_COUNT();
+2023-04-10 09:27:30.199 -03:00 [INF] #### Repository - Editando categoria. ####
+2023-04-10 09:27:30.199 -03:00 [INF] #### Service - Editando categoria. ####
+2023-04-10 09:27:30.203 -03:00 [INF] #### Requisição -> {"Nome":"TesteLogUpdate","Status":false}. ####
+2023-04-10 09:27:30.203 -03:00 [INF] #### Tempo de edição de Categoria. completed in 955.3 ms
+2023-04-10 09:27:30.203 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-10 09:27:30.205 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI) in 968.3259ms
+2023-04-10 09:27:30.205 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI)'
+2023-04-10 09:27:30.206 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/categoria/editar/18 application/json 58 - 200 - text/plain;+charset=utf-8 974.8519ms
+2023-04-10 09:27:45.454 -03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:5001/Categoria/17 - -
+2023-04-10 09:27:45.455 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.DeletaCategoria (ProjetoAPI)'
+2023-04-10 09:27:45.459 -03:00 [INF] Route matched with {action = "DeletaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeletaCategoria(Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-10 09:27:45.461 -03:00 [INF] #### DELETE - Requisição de excluir categoria. ####
+2023-04-10 09:27:45.462 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-10 09:27:45.496 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:27:45.501 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:27:45.502 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-10 09:27:45.507 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:27:45.531 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM `Categorias`
+WHERE `Id` = @p0;
+SELECT ROW_COUNT();
+2023-04-10 09:27:45.547 -03:00 [INF] #### Repository - Deletando categoria. ####
+2023-04-10 09:27:45.547 -03:00 [INF] #### Service - Deletando categoria. ####
+2023-04-10 09:27:45.548 -03:00 [INF] #### Requisição -> ID: 17. ####
+2023-04-10 09:27:45.548 -03:00 [INF] #### Tempo exclusão de Categoria. completed in 87.2 ms
+2023-04-10 09:27:45.549 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-10 09:27:45.549 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.DeletaCategoria (ProjetoAPI) in 89.7805ms
+2023-04-10 09:27:45.549 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.DeletaCategoria (ProjetoAPI)'
+2023-04-10 09:27:45.550 -03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:5001/Categoria/17 - - - 200 - text/plain;+charset=utf-8 95.7490ms
+2023-04-10 09:28:20.194 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/subcategoria application/json 84
+2023-04-10 09:28:20.195 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/subcategoria application/json 84 - 307 0 - 0.5474ms
+2023-04-10 09:28:20.201 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/subcategoria application/json 84
+2023-04-10 09:28:20.201 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.CadastrarSubcategorias (ProjetoAPI)'
+2023-04-10 09:28:20.204 -03:00 [INF] Route matched with {action = "CadastrarSubcategorias", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarSubcategorias(ProjetoAPI.Data.Dtos.SubcategoriaDto.CreateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:28:20.227 -03:00 [INF] #### POST - Inserção de uma nova subcategoria. ####
+2023-04-10 09:28:20.236 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:28:20.250 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__subcategoria_CategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__subcategoria_CategoriaId_0
+LIMIT 1
+2023-04-10 09:28:20.251 -03:00 [WRN] #### Erro: Nome ou Status não atende aos crítérios.
+2023-04-10 09:28:20.252 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-04-10 09:28:20.252 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.CadastrarSubcategorias (ProjetoAPI) in 47.5547ms
+2023-04-10 09:28:20.252 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.CadastrarSubcategorias (ProjetoAPI)'
+2023-04-10 09:28:20.253 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/subcategoria application/json 84 - 400 - text/plain;+charset=utf-8 51.8568ms
+2023-04-10 09:28:27.141 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/subcategoria application/json 84
+2023-04-10 09:28:27.142 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/subcategoria application/json 84 - 307 0 - 0.5273ms
+2023-04-10 09:28:27.149 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/subcategoria application/json 84
+2023-04-10 09:28:27.149 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.CadastrarSubcategorias (ProjetoAPI)'
+2023-04-10 09:28:27.149 -03:00 [INF] Route matched with {action = "CadastrarSubcategorias", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarSubcategorias(ProjetoAPI.Data.Dtos.SubcategoriaDto.CreateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:28:27.151 -03:00 [INF] #### POST - Inserção de uma nova subcategoria. ####
+2023-04-10 09:28:27.152 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:28:27.155 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__subcategoria_CategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__subcategoria_CategoriaId_0
+LIMIT 1
+2023-04-10 09:28:27.155 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-04-10 09:28:27.155 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.CadastrarSubcategorias (ProjetoAPI) in 5.6936ms
+2023-04-10 09:28:27.155 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.CadastrarSubcategorias (ProjetoAPI)'
+2023-04-10 09:28:27.156 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/subcategoria application/json 84 - 400 - text/plain;+charset=utf-8 6.9535ms
+2023-04-10 09:28:54.198 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/subcategoria application/json 84
+2023-04-10 09:28:54.198 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/subcategoria application/json 84 - 307 0 - 0.4015ms
+2023-04-10 09:28:54.223 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/subcategoria application/json 84
+2023-04-10 09:28:54.223 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.CadastrarSubcategorias (ProjetoAPI)'
+2023-04-10 09:28:54.224 -03:00 [INF] Route matched with {action = "CadastrarSubcategorias", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarSubcategorias(ProjetoAPI.Data.Dtos.SubcategoriaDto.CreateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:28:54.230 -03:00 [INF] #### POST - Inserção de uma nova subcategoria. ####
+2023-04-10 09:28:54.232 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:28:54.245 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__subcategoria_CategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__subcategoria_CategoriaId_0
+LIMIT 1
+2023-04-10 09:28:54.246 -03:00 [WRN] #### Erro: Nome ou Status não atende aos crítérios.
+2023-04-10 09:28:54.246 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-04-10 09:28:54.247 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.CadastrarSubcategorias (ProjetoAPI) in 23.1071ms
+2023-04-10 09:28:54.247 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.CadastrarSubcategorias (ProjetoAPI)'
+2023-04-10 09:28:54.250 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/subcategoria application/json 84 - 400 - text/plain;+charset=utf-8 26.7141ms
+2023-04-10 09:29:26.298 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/subcategoria application/json 84
+2023-04-10 09:29:26.299 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/subcategoria application/json 84 - 307 0 - 0.3280ms
+2023-04-10 09:29:26.323 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/subcategoria application/json 84
+2023-04-10 09:29:26.323 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.CadastrarSubcategorias (ProjetoAPI)'
+2023-04-10 09:29:26.324 -03:00 [INF] Route matched with {action = "CadastrarSubcategorias", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarSubcategorias(ProjetoAPI.Data.Dtos.SubcategoriaDto.CreateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:29:26.368 -03:00 [INF] #### POST - Inserção de uma nova subcategoria. ####
+2023-04-10 09:29:26.369 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:29:26.373 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__subcategoria_CategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__subcategoria_CategoriaId_0
+LIMIT 1
+2023-04-10 09:29:26.373 -03:00 [INF] #### Service - Inserção de uma nova subcategoria. ####
+2023-04-10 09:29:26.500 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (Size = 128), @p4='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Subcategorias` (`CategoriaId`, `DataAlteracao`, `DataCriacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT `Id`
+FROM `Subcategorias`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2023-04-10 09:29:26.511 -03:00 [INF] Executing OkObjectResult, writing value of type 'ProjetoAPI.Models.Subcategoria'.
+2023-04-10 09:29:26.619 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-04-10 09:29:26.628 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.CadastrarSubcategorias (ProjetoAPI) in 260.4867ms
+2023-04-10 09:29:26.628 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.CadastrarSubcategorias (ProjetoAPI)'
+2023-04-10 09:29:26.629 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/subcategoria application/json 84 - 200 289 application/json;+charset=utf-8 305.4049ms
+2023-04-10 09:29:34.742 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:29:34.745 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:29:34.756 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:29:34.760 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:29:34.761 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:29:34.774 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:29:34.784 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 27.9568ms
+2023-04-10 09:29:34.784 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:29:34.784 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 42.4606ms
+2023-04-10 09:30:06.043 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:30:06.045 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:30:06.050 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:30:06.058 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:30:06.061 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:30:06.088 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:30:06.095 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:30:22.333 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 16282.6445ms
+2023-04-10 09:30:22.335 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:30:27.790 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58 - 500 - application/json 21746.4223ms
+2023-04-10 09:30:56.351 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:30:56.351 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:30:56.352 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:31:00.150 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:31:01.004 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:31:01.008 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:31:01.011 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:31:25.296 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 28943.5763ms
+2023-04-10 09:31:25.296 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:31:41.650 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58 - 500 - application/json 45299.6798ms
+2023-04-10 09:35:16.282 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-04-10 09:35:20.952 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-10 09:35:20.958 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-10 09:35:20.958 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-10 09:35:20.958 -03:00 [INF] Hosting environment: Development
+2023-04-10 09:35:20.958 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-04-10 09:35:22.704 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-10 09:35:23.669 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-10 09:35:23.677 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-10 09:35:23.695 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 18.1397ms
+2023-04-10 09:35:23.725 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 1037.8953ms
+2023-04-10 09:35:23.810 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 140.1867ms
+2023-04-10 09:35:24.353 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-10 09:35:24.691 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 337.1299ms
+2023-04-10 09:35:28.757 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:35:28.867 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:35:28.951 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:35:34.303 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:35:37.519 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:35:39.111 -03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:35:39.152 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:35:44.172 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 15205.0528ms
+2023-04-10 09:35:44.175 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:35:46.537 -03:00 [ERR] #### Erro: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ProjetoAPI.Services.SubcategoriaService.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Services\SubcategoriaService.cs:line 61
+   at ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Controllers\SubcategoriaController.cs:line 47
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ProjetoAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Middleware\ErrorHandlingMiddleware.cs:line 28.
+2023-04-10 09:35:46.655 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58 - 500 - application/json 17897.8838ms
+2023-04-10 09:41:44.578 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-04-10 09:41:48.751 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-10 09:41:48.756 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-10 09:41:48.756 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-10 09:41:48.756 -03:00 [INF] Hosting environment: Development
+2023-04-10 09:41:48.756 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-04-10 09:41:51.610 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:41:51.610 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-10 09:41:52.109 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:41:52.333 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:41:53.514 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 1843.5809ms
+2023-04-10 09:41:53.527 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-10 09:41:53.527 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-10 09:41:53.547 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 20.4139ms
+2023-04-10 09:41:55.249 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1722.8293ms
+2023-04-10 09:41:55.676 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-10 09:41:56.183 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 506.5721ms
+2023-04-10 09:42:02.268 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:42:08.729 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:42:10.837 -03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:42:10.884 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:42:18.226 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 25878.7768ms
+2023-04-10 09:42:18.227 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:42:21.264 -03:00 [ERR] #### Erro: StackTrace:    at ProjetoAPI.Services.SubcategoriaService.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Services\SubcategoriaService.cs:line 61
+   at ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Controllers\SubcategoriaController.cs:line 47
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ProjetoAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Middleware\ErrorHandlingMiddleware.cs:line 28 
+ Message: Object reference not set to an instance of an object..
+2023-04-10 09:42:21.415 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58 - 500 - application/json 29815.5790ms
+2023-04-10 09:43:03.077 -03:00 [INF] Application is shutting down...
+2023-04-10 09:44:26.898 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-04-10 09:44:30.422 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-10 09:44:30.424 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-10 09:44:30.424 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-10 09:44:30.424 -03:00 [INF] Hosting environment: Development
+2023-04-10 09:44:30.424 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-04-10 09:44:31.694 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-10 09:44:32.168 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 479.9974ms
+2023-04-10 09:44:32.185 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-10 09:44:32.185 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-10 09:44:32.197 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 12.4636ms
+2023-04-10 09:44:32.306 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 121.4484ms
+2023-04-10 09:44:32.528 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-10 09:44:32.734 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 206.0751ms
+2023-04-10 09:44:50.632 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:44:50.714 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:44:50.838 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:44:52.142 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:44:52.143 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:44:53.181 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:44:53.557 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 2711.2097ms
+2023-04-10 09:44:53.557 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:44:53.559 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 2927.7840ms
+2023-04-10 09:44:58.359 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:44:58.367 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:44:58.368 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:44:58.369 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:44:58.369 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:44:58.373 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:44:58.374 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 5.6671ms
+2023-04-10 09:44:58.374 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:44:58.374 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 14.8987ms
+2023-04-10 09:44:59.678 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:44:59.679 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:44:59.680 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:44:59.690 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:44:59.690 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:44:59.694 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:44:59.694 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 14.0656ms
+2023-04-10 09:44:59.694 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:44:59.695 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 16.7509ms
+2023-04-10 09:45:00.821 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:45:00.821 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:00.822 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:45:00.823 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:45:00.823 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:45:00.825 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:45:00.826 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 3.7742ms
+2023-04-10 09:45:00.826 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:00.826 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 4.9364ms
+2023-04-10 09:45:02.304 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:45:02.304 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:02.304 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:45:02.305 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:45:02.305 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:45:02.306 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:45:02.307 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 2.4427ms
+2023-04-10 09:45:02.307 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:02.307 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 3.1398ms
+2023-04-10 09:45:03.626 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:45:03.626 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:03.626 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:45:03.627 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:45:03.627 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:45:03.632 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:45:03.633 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 6.1188ms
+2023-04-10 09:45:03.633 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:03.633 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 7.8058ms
+2023-04-10 09:45:05.123 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:45:05.124 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:05.124 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:45:05.124 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:45:05.124 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:45:05.126 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:45:05.126 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 2.4649ms
+2023-04-10 09:45:05.126 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:05.126 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 3.1747ms
+2023-04-10 09:45:10.361 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:45:10.362 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:10.365 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:45:10.365 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:45:10.365 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:45:10.370 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:45:10.372 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 6.7964ms
+2023-04-10 09:45:10.372 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:10.372 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 10.5430ms
+2023-04-10 09:45:12.475 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:45:12.475 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:12.476 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:45:12.476 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:45:12.476 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:45:12.478 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:45:12.479 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 3.1593ms
+2023-04-10 09:45:12.479 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:12.479 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 3.7863ms
+2023-04-10 09:45:13.640 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:45:13.640 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:13.642 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:45:13.642 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:45:13.643 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:45:13.661 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:45:13.662 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 19.6553ms
+2023-04-10 09:45:13.662 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:13.662 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 22.4466ms
+2023-04-10 09:45:31.928 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:45:31.928 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:31.929 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:45:31.929 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:45:31.929 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:45:31.938 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:45:31.939 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 9.7475ms
+2023-04-10 09:45:31.939 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:31.939 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 10.7512ms
+2023-04-10 09:45:33.241 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:45:33.241 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:33.241 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:45:33.242 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:45:33.242 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:45:33.245 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:45:33.245 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 3.826ms
+2023-04-10 09:45:33.245 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:33.245 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 4.8207ms
+2023-04-10 09:45:36.461 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - -
+2023-04-10 09:45:36.462 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:36.462 -03:00 [INF] Route matched with {action = "PesquisaSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaSubcategoria(ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:45:36.463 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-10 09:45:36.463 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-10 09:45:36.479 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.SubcategoriaDto.ReadSubcategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 09:45:36.479 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI) in 17.0595ms
+2023-04-10 09:45:36.479 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.PesquisaSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:36.480 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/subcategoria/buscar - - - 200 248 application/json;+charset=utf-8 18.3057ms
+2023-04-10 09:45:53.320 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:45:53.321 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:45:53.329 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:45:53.563 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:45:56.737 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:45:57.761 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:45:57.793 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:46:06.397 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 13067.5705ms
+2023-04-10 09:46:06.400 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:46:09.130 -03:00 [ERR] #### Erro: StackTrace:    at ProjetoAPI.Services.SubcategoriaService.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Services\SubcategoriaService.cs:line 61
+   at ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Controllers\SubcategoriaController.cs:line 47
+   at lambda_method23(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ProjetoAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Middleware\ErrorHandlingMiddleware.cs:line 28 
+ Message: Object reference not set to an instance of an object..
+2023-04-10 09:46:09.164 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58 - 500 - application/json 15843.7115ms
+2023-04-10 09:46:13.198 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:46:13.198 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:46:13.200 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:46:13.214 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:46:13.295 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:46:13.297 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:46:13.298 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:46:55.345 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 42144.1767ms
+2023-04-10 09:46:55.345 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:46:55.406 -03:00 [ERR] #### Erro: StackTrace:    at ProjetoAPI.Services.SubcategoriaService.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Services\SubcategoriaService.cs:line 61
+   at ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Controllers\SubcategoriaController.cs:line 47
+   at lambda_method23(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ProjetoAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Middleware\ErrorHandlingMiddleware.cs:line 28 
+ Message: Object reference not set to an instance of an object..
+2023-04-10 09:46:55.407 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58 - 500 - application/json 42208.7746ms
+2023-04-10 09:46:59.791 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:46:59.796 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:46:59.797 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:46:59.798 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:46:59.813 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:46:59.818 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:46:59.821 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:47:03.931 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 4134.1576ms
+2023-04-10 09:47:03.932 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:47:03.983 -03:00 [ERR] #### Erro: StackTrace:    at ProjetoAPI.Services.SubcategoriaService.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Services\SubcategoriaService.cs:line 61
+   at ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Controllers\SubcategoriaController.cs:line 47
+   at lambda_method23(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ProjetoAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Middleware\ErrorHandlingMiddleware.cs:line 28 
+ Message: Object reference not set to an instance of an object..
+2023-04-10 09:47:03.983 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58 - 500 - application/json 4191.9203ms
+2023-04-10 09:47:15.149 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:47:15.150 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:47:15.150 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:47:15.150 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:47:15.151 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:47:15.154 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:47:15.158 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:47:17.497 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 2347.1962ms
+2023-04-10 09:47:17.497 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:47:17.563 -03:00 [ERR] #### Erro: StackTrace:    at ProjetoAPI.Services.SubcategoriaService.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Services\SubcategoriaService.cs:line 61
+   at ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Controllers\SubcategoriaController.cs:line 47
+   at lambda_method23(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ProjetoAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Middleware\ErrorHandlingMiddleware.cs:line 28 
+ Message: Object reference not set to an instance of an object..
+2023-04-10 09:47:17.563 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58 - 500 - application/json 2414.0360ms
+2023-04-10 09:47:20.614 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:47:20.614 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:47:20.614 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:47:20.614 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:47:20.615 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:47:20.617 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:47:20.619 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:47:22.192 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 1577.5272ms
+2023-04-10 09:47:22.192 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:47:22.294 -03:00 [ERR] #### Erro: StackTrace:    at ProjetoAPI.Services.SubcategoriaService.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Services\SubcategoriaService.cs:line 61
+   at ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Controllers\SubcategoriaController.cs:line 47
+   at lambda_method23(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ProjetoAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Middleware\ErrorHandlingMiddleware.cs:line 28 
+ Message: Object reference not set to an instance of an object..
+2023-04-10 09:47:22.296 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58 - 500 - application/json 1682.2903ms
+2023-04-10 09:47:57.287 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-04-10 09:48:00.564 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-10 09:48:00.568 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-10 09:48:00.569 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-10 09:48:00.569 -03:00 [INF] Hosting environment: Development
+2023-04-10 09:48:00.569 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-04-10 09:48:01.928 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-10 09:48:02.608 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-10 09:48:02.609 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-10 09:48:02.673 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 29.9744ms
+2023-04-10 09:48:02.698 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 800.4523ms
+2023-04-10 09:48:03.485 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 875.9188ms
+2023-04-10 09:48:03.527 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:48:03.679 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:48:03.718 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-10 09:48:03.813 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:48:04.401 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 682.8262ms
+2023-04-10 09:48:06.352 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:48:08.897 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:48:10.579 -03:00 [INF] Executed DbCommand (33ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:48:10.625 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:48:13.808 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 9980.5524ms
+2023-04-10 09:48:13.810 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:48:13.953 -03:00 [ERR] #### Erro: StackTrace:    at ProjetoAPI.Services.SubcategoriaService.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Services\SubcategoriaService.cs:line 61
+   at ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Controllers\SubcategoriaController.cs:line 47
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ProjetoAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Middleware\ErrorHandlingMiddleware.cs:line 28 
+ Message: Object reference not set to an instance of an object..
+2023-04-10 09:48:14.071 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58 - 500 - application/json 10543.9495ms
+2023-04-10 09:48:19.374 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:48:19.381 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:48:19.382 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:48:19.386 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:48:19.494 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:48:19.499 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:48:19.502 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:48:21.715 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 2332.2708ms
+2023-04-10 09:48:21.716 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:48:21.775 -03:00 [ERR] #### Erro: StackTrace:    at ProjetoAPI.Services.SubcategoriaService.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Services\SubcategoriaService.cs:line 61
+   at ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Controllers\SubcategoriaController.cs:line 47
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ProjetoAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Middleware\ErrorHandlingMiddleware.cs:line 28 
+ Message: Object reference not set to an instance of an object..
+2023-04-10 09:48:21.776 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58 - 500 - application/json 2402.2758ms
+2023-04-10 09:48:26.196 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:48:26.196 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:48:26.197 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:48:26.209 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:48:26.236 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:48:26.243 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:48:26.246 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:48:28.416 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 2219.3451ms
+2023-04-10 09:48:28.421 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:48:28.482 -03:00 [ERR] #### Erro: StackTrace:    at ProjetoAPI.Services.SubcategoriaService.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Services\SubcategoriaService.cs:line 61
+   at ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Controllers\SubcategoriaController.cs:line 47
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ProjetoAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Middleware\ErrorHandlingMiddleware.cs:line 28 
+ Message: Object reference not set to an instance of an object..
+2023-04-10 09:48:28.482 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58 - 500 - application/json 2286.2471ms
+2023-04-10 09:48:34.869 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/subcategoria/editar/14 application/json 58
+2023-04-10 09:48:34.869 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:48:34.869 -03:00 [INF] Route matched with {action = "EditarSubcategoria", controller = "Subcategoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarSubcategoria(Int32, ProjetoAPI.Data.Dtos.SubcategoriaDto.UpdateSubcategoriaDto) on controller ProjetoAPI.Controllers.SubcategoriaController (ProjetoAPI).
+2023-04-10 09:48:34.870 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-10 09:48:34.871 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-10 09:48:34.877 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:48:34.880 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2023-04-10 09:48:36.452 -03:00 [INF] Executed action ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI) in 1582.6698ms
+2023-04-10 09:48:36.453 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria (ProjetoAPI)'
+2023-04-10 09:48:36.503 -03:00 [ERR] #### Erro: StackTrace:    at ProjetoAPI.Services.SubcategoriaService.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Services\SubcategoriaService.cs:line 61
+   at ProjetoAPI.Controllers.SubcategoriaController.EditarSubcategoria(Int32 id, UpdateSubcategoriaDto novoNomeDto) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Controllers\SubcategoriaController.cs:line 47
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ProjetoAPI.Middleware.ErrorHandlingMiddleware.Invoke(HttpContext context) in D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI\Middleware\ErrorHandlingMiddleware.cs:line 28 
+ Message: Object reference not set to an instance of an object..

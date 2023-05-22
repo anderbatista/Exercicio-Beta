@@ -1,0 +1,380 @@
+2023-04-03 10:03:46.689 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-04-03 10:03:50.645 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-03 10:03:50.647 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-03 10:03:50.647 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-03 10:03:50.648 -03:00 [INF] Hosting environment: Development
+2023-04-03 10:03:50.648 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-04-03 10:03:51.796 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-03 10:03:52.094 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-03 10:03:52.094 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 312.1609ms
+2023-04-03 10:03:52.099 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.7260ms
+2023-04-03 10:03:52.103 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-03 10:03:52.200 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 104.5588ms
+2023-04-03 10:03:52.293 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-03 10:03:52.318 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png - -
+2023-04-03 10:03:52.333 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-04-03 10:03:52.334 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png - - - 200 628 image/png 15.9472ms
+2023-04-03 10:03:52.408 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 114.5711ms
+2023-04-03 10:04:31.248 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/categoria/buscar - -
+2023-04-03 10:04:31.294 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:04:31.335 -03:00 [INF] Route matched with {action = "PesquisaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoria(ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:04:32.193 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-03 10:04:33.478 -03:00 [INF] #### Repository - Busca personalizada de categoria. ####
+2023-04-03 10:04:33.478 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-03 10:04:33.631 -03:00 [INF] #### Requisição -> [{"Id":1,"Nome":"TesteCategoria","Status":true,"DataCriacao":"2023-03-06T11:16:26","DataAlteracao":null},{"Id":2,"Nome":"TesteEditarCategoria","Status":false,"DataCriacao":"2023-03-24T17:29:12","DataAlteracao":"2023-03-27T10:24:01"},{"Id":3,"Nome":"TesteLog","Status":true,"DataCriacao":"2023-03-24T19:01:28","DataAlteracao":null},{"Id":4,"Nome":"TesteLog","Status":true,"DataCriacao":"2023-03-24T19:06:45","DataAlteracao":null},{"Id":5,"Nome":"TesteLog","Status":true,"DataCriacao":"2023-03-24T19:13:58","DataAlteracao":null},{"Id":6,"Nome":"TesteLog","Status":true,"DataCriacao":"2023-03-24T19:25:35","DataAlteracao":null},{"Id":7,"Nome":"TesteLog","Status":true,"DataCriacao":"2023-03-24T20:36:36","DataAlteracao":null},{"Id":10,"Nome":"TesteLog","Status":true,"DataCriacao":"2023-03-24T21:41:01","DataAlteracao":null},{"Id":11,"Nome":"TesteLog","Status":true,"DataCriacao":"2023-03-24T21:41:23","DataAlteracao":null},{"Id":12,"Nome":"TesteLog","Status":true,"DataCriacao":"2023-03-24T21:41:30","DataAlteracao":null},{"Id":13,"Nome":"TesteLog","Status":true,"DataCriacao":"2023-03-24T21:41:55","DataAlteracao":null},{"Id":14,"Nome":"TesteCategoria","Status":true,"DataCriacao":"2023-03-24T22:32:46","DataAlteracao":null},{"Id":15,"Nome":"TesteCategoria","Status":true,"DataCriacao":"2023-03-27T09:54:06","DataAlteracao":null},{"Id":16,"Nome":"TesteCategoria","Status":true,"DataCriacao":"2023-03-27T10:00:39","DataAlteracao":null}]. ####
+2023-04-03 10:04:33.633 -03:00 [INF] #### Tempo do método buscar Categoria. completed in 1438.8 ms
+2023-04-03 10:04:33.638 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-03 10:04:33.663 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI) in 2322.4265ms
+2023-04-03 10:04:33.663 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:04:33.664 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/categoria/buscar - - - 200 1434 application/json;+charset=utf-8 2415.9135ms
+2023-04-03 10:07:00.983 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-04-03 10:07:02.914 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-03 10:07:02.916 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-03 10:07:02.916 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-03 10:07:02.916 -03:00 [INF] Hosting environment: Development
+2023-04-03 10:07:02.916 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-04-03 10:07:03.755 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-03 10:07:03.952 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-03 10:07:03.952 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-03 10:07:03.954 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 200.7004ms
+2023-04-03 10:07:03.961 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 8.3997ms
+2023-04-03 10:07:03.982 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.2368ms
+2023-04-03 10:07:04.146 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-03 10:07:04.252 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 106.5134ms
+2023-04-03 10:07:15.211 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/categoria/buscar - -
+2023-04-03 10:07:15.251 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:07:15.292 -03:00 [INF] Route matched with {action = "PesquisaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoria(ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:07:15.734 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-03 10:07:16.129 -03:00 [INF] #### Repository - Busca personalizada de categoria. ####
+2023-04-03 10:07:16.129 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-03 10:07:16.131 -03:00 [INF] #### Tempo do método buscar Categoria. completed in 395.7 ms
+2023-04-03 10:07:16.138 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-03 10:07:16.270 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI) in 970.3985ms
+2023-04-03 10:07:16.270 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:07:16.271 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/categoria/buscar - - - 200 1434 application/json;+charset=utf-8 1059.9100ms
+2023-04-03 10:07:46.542 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/categoria/buscar?id=8 - -
+2023-04-03 10:07:46.545 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:07:46.546 -03:00 [INF] Route matched with {action = "PesquisaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoria(ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:07:46.550 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-03 10:07:46.560 -03:00 [INF] #### Repository - Busca personalizada de categoria. ####
+2023-04-03 10:07:46.560 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-03 10:07:46.560 -03:00 [INF] #### Tempo do método buscar Categoria. completed in 9.7 ms
+2023-04-03 10:07:46.560 -03:00 [WRN] #### Erro: Não foi localizado o objeto desejado no banco de dados.
+2023-04-03 10:07:46.560 -03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-04-03 10:07:46.562 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI) in 16.0131ms
+2023-04-03 10:07:46.562 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:07:46.563 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/categoria/buscar?id=8 - - - 404 - text/plain;+charset=utf-8 21.0715ms
+2023-04-03 10:08:12.277 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/categoria/buscar?id=5 - -
+2023-04-03 10:08:12.278 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:08:12.278 -03:00 [INF] Route matched with {action = "PesquisaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoria(ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:08:12.282 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-03 10:08:12.285 -03:00 [INF] #### Repository - Busca personalizada de categoria. ####
+2023-04-03 10:08:12.285 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-03 10:08:12.285 -03:00 [INF] #### Tempo do método buscar Categoria. completed in 2.6 ms
+2023-04-03 10:08:12.285 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-03 10:08:12.285 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI) in 7.4949ms
+2023-04-03 10:08:12.285 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:08:12.285 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/categoria/buscar?id=5 - - - 200 99 application/json;+charset=utf-8 8.0745ms
+2023-04-03 10:08:58.333 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/categoria/buscar?id=8 - -
+2023-04-03 10:08:58.333 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:08:58.334 -03:00 [INF] Route matched with {action = "PesquisaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoria(ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:08:58.334 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-03 10:08:58.335 -03:00 [INF] #### Repository - Busca personalizada de categoria. ####
+2023-04-03 10:08:58.336 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-03 10:08:58.336 -03:00 [INF] #### Tempo do método buscar Categoria. completed in 1.7 ms
+2023-04-03 10:08:58.336 -03:00 [WRN] #### Erro: Não foi localizado o objeto desejado no banco de dados.
+2023-04-03 10:08:58.336 -03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-04-03 10:08:58.336 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI) in 2.4283ms
+2023-04-03 10:08:58.336 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:08:58.336 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/categoria/buscar?id=8 - - - 404 - text/plain;+charset=utf-8 3.0787ms
+2023-04-03 10:10:22.545 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-04-03 10:10:24.425 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-03 10:10:24.427 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-03 10:10:24.427 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-03 10:10:24.427 -03:00 [INF] Hosting environment: Development
+2023-04-03 10:10:24.427 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-04-03 10:10:25.365 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-03 10:10:25.582 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-03 10:10:25.583 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-03 10:10:25.584 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 220.7474ms
+2023-04-03 10:10:25.585 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.1676ms
+2023-04-03 10:10:25.616 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.5034ms
+2023-04-03 10:10:25.701 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-03 10:10:25.821 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 119.8835ms
+2023-04-03 10:10:42.558 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/categoria/buscar?id=8 - -
+2023-04-03 10:10:42.613 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:10:42.652 -03:00 [INF] Route matched with {action = "PesquisaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoria(ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:10:43.183 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-03 10:10:43.682 -03:00 [INF] #### Repository - Busca personalizada de categoria. ####
+2023-04-03 10:10:43.683 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-03 10:10:43.684 -03:00 [INF] #### Tempo do método buscar Categoria. completed in 500.7 ms
+2023-04-03 10:10:43.685 -03:00 [WRN] #### Erro: Categoria não localizada no banco de dados.
+2023-04-03 10:10:43.694 -03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-04-03 10:10:43.698 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI) in 1042.9532ms
+2023-04-03 10:10:43.699 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:10:43.699 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/categoria/buscar?id=8 - - - 404 - text/plain;+charset=utf-8 1141.7794ms
+2023-04-03 10:10:52.503 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/categoria/buscar?status=false - -
+2023-04-03 10:10:52.507 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:10:52.507 -03:00 [INF] Route matched with {action = "PesquisaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoria(ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:10:52.508 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-03 10:10:52.514 -03:00 [INF] #### Repository - Busca personalizada de categoria. ####
+2023-04-03 10:10:52.514 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-03 10:10:52.514 -03:00 [INF] #### Tempo do método buscar Categoria. completed in 5.9 ms
+2023-04-03 10:10:52.514 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-03 10:10:52.651 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI) in 143.7359ms
+2023-04-03 10:10:52.651 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:10:52.651 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/categoria/buscar?status=false - - - 200 129 application/json;+charset=utf-8 148.2355ms
+2023-04-03 10:12:02.452 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/categoria/editar/16 application/json 64
+2023-04-03 10:12:02.452 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI)'
+2023-04-03 10:12:02.454 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarCategoria(Int32, ProjetoAPI.Data.Dtos.CategoriaDto.UpdateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:12:02.567 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-03 10:12:03.652 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-03 10:12:03.991 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-03 10:12:04.084 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__id_0
+2023-04-03 10:12:04.084 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-03 10:12:04.087 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-03 10:12:04.193 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 128), @p2='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Categorias` SET `DataAlteracao` = @p0, `Nome` = @p1, `Status` = @p2
+WHERE `Id` = @p3;
+SELECT ROW_COUNT();
+2023-04-03 10:12:04.211 -03:00 [INF] #### Repository - Editando categoria. ####
+2023-04-03 10:12:04.211 -03:00 [INF] #### Service - Editando categoria. ####
+2023-04-03 10:12:04.212 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-03 10:12:04.214 -03:00 [INF] #### Requisição -> {"Nome":"TesteEditarCategoria","Status":false}. ####
+2023-04-03 10:12:04.214 -03:00 [INF] #### Tempo de edição de Categoria. completed in 1678.3 ms
+2023-04-03 10:12:04.214 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-03 10:12:04.214 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI) in 1760.0925ms
+2023-04-03 10:12:04.214 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI)'
+2023-04-03 10:12:04.219 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/categoria/editar/16 application/json 64 - 200 - text/plain;+charset=utf-8 1767.5971ms
+2023-04-03 10:13:48.237 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/categoria/editar/15 application/json 58
+2023-04-03 10:13:48.237 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI)'
+2023-04-03 10:13:48.237 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarCategoria(Int32, ProjetoAPI.Data.Dtos.CategoriaDto.UpdateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:13:48.238 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-03 10:13:48.270 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-03 10:13:48.271 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-03 10:13:48.273 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__id_0
+2023-04-03 10:13:48.273 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-03 10:13:48.273 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-03 10:13:48.278 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 128), @p2='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Categorias` SET `DataAlteracao` = @p0, `Nome` = @p1, `Status` = @p2
+WHERE `Id` = @p3;
+SELECT ROW_COUNT();
+2023-04-03 10:13:48.283 -03:00 [INF] #### Repository - Editando categoria. ####
+2023-04-03 10:13:48.283 -03:00 [INF] #### Service - Editando categoria. ####
+2023-04-03 10:13:48.283 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-03 10:13:48.283 -03:00 [INF] #### Requisição -> {"Nome":"TesteEditarLog","Status":false}. ####
+2023-04-03 10:13:48.283 -03:00 [INF] #### Tempo de edição de Categoria. completed in 45.2 ms
+2023-04-03 10:13:48.284 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-03 10:13:48.284 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI) in 47.22ms
+2023-04-03 10:13:48.284 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI)'
+2023-04-03 10:13:48.285 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/categoria/editar/15 application/json 58 - 200 - text/plain;+charset=utf-8 47.9453ms
+2023-04-03 10:16:11.975 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-04-03 10:16:13.513 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-03 10:16:13.516 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-03 10:16:13.516 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-03 10:16:13.516 -03:00 [INF] Hosting environment: Development
+2023-04-03 10:16:13.516 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-04-03 10:16:13.999 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-03 10:16:14.251 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-03 10:16:14.253 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-03 10:16:14.255 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 257.0866ms
+2023-04-03 10:16:14.259 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 5.9377ms
+2023-04-03 10:16:14.282 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.3894ms
+2023-04-03 10:16:14.379 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-03 10:16:14.499 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 120.5904ms
+2023-04-03 10:16:23.351 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/categoria/editar/15 application/json 58
+2023-04-03 10:16:23.406 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI)'
+2023-04-03 10:16:23.430 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarCategoria(Int32, ProjetoAPI.Data.Dtos.CategoriaDto.UpdateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:16:24.029 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-03 10:16:24.042 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-03 10:16:24.988 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-03 10:16:25.599 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-03 10:16:25.695 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__id_0
+2023-04-03 10:16:25.696 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-03 10:16:25.702 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-03 10:16:25.806 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Categorias` SET `DataAlteracao` = @p0
+WHERE `Id` = @p1;
+SELECT ROW_COUNT();
+2023-04-03 10:16:25.819 -03:00 [INF] #### Repository - Editando categoria. ####
+2023-04-03 10:16:25.819 -03:00 [INF] #### Service - Editando categoria. ####
+2023-04-03 10:16:25.864 -03:00 [INF] #### Requisição -> {"Nome":"TesteEditarLog","Status":false}. ####
+2023-04-03 10:16:25.867 -03:00 [INF] #### Tempo de edição de Categoria. completed in 1835.6 ms
+2023-04-03 10:16:25.877 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-03 10:16:25.888 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI) in 2448.7345ms
+2023-04-03 10:16:25.888 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI)'
+2023-04-03 10:16:25.895 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/categoria/editar/15 application/json 58 - 200 - text/plain;+charset=utf-8 2543.7199ms
+2023-04-03 10:20:25.217 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-04-03 10:20:26.542 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-03 10:20:26.543 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-03 10:20:26.544 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-03 10:20:26.544 -03:00 [INF] Hosting environment: Development
+2023-04-03 10:20:26.544 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-04-03 10:20:27.110 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-03 10:20:27.294 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-03 10:20:27.294 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-03 10:20:27.296 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 190.1650ms
+2023-04-03 10:20:27.298 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.9424ms
+2023-04-03 10:20:27.338 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 43.7355ms
+2023-04-03 10:20:27.418 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-03 10:20:27.512 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 93.4523ms
+2023-04-03 10:20:44.497 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/categoria application/json 51
+2023-04-03 10:20:44.500 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/categoria application/json 51 - 307 0 - 3.2326ms
+2023-04-03 10:20:44.513 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/categoria application/json 51
+2023-04-03 10:20:44.564 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-04-03 10:20:44.608 -03:00 [INF] Route matched with {action = "CadastrarCategorias", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CadastrarCategorias(ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:20:45.214 -03:00 [INF] #### POST - Inserção de uma nova categoria. ####
+2023-04-03 10:20:45.215 -03:00 [INF] #### Service - Inserção de uma nova categoria. ####
+2023-04-03 10:20:46.176 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-03 10:20:46.664 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataAlteracao`, `DataCriacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2023-04-03 10:20:46.710 -03:00 [INF] #### Repository - Inserção de uma nova categoria. ####
+2023-04-03 10:20:46.742 -03:00 [INF] #### Requisição -> {"Nome":"TesteLog","DataCriacao":"2023-04-03T10:20:45.1676029-03:00","Status":true}. ####
+2023-04-03 10:20:46.744 -03:00 [INF] #### Tempo de adição de uma nova Categoria. completed in 1527.5 ms
+2023-04-03 10:20:46.751 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProjetoAPI.Data.Dtos.CategoriaDto.CreateCategoriaDto'.
+2023-04-03 10:20:46.824 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI) in 2209.9578ms
+2023-04-03 10:20:46.824 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.CadastrarCategorias (ProjetoAPI)'
+2023-04-03 10:20:46.827 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/categoria application/json 51 - 201 83 application/json;+charset=utf-8 2314.5711ms
+2023-04-03 10:21:02.313 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/categoria/buscar - -
+2023-04-03 10:21:02.315 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:21:02.318 -03:00 [INF] Route matched with {action = "PesquisaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoria(ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:21:02.330 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-03 10:21:02.330 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-03 10:21:02.418 -03:00 [INF] #### Repository - Busca personalizada de categoria. ####
+2023-04-03 10:21:02.419 -03:00 [INF] #### Tempo do método buscar Categoria. completed in 88.3 ms
+2023-04-03 10:21:02.419 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, ProjetoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-03 10:21:02.432 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI) in 114.7179ms
+2023-04-03 10:21:02.433 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:21:02.433 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/categoria/buscar - - - 200 1575 application/json;+charset=utf-8 119.8590ms
+2023-04-03 10:21:13.709 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/categoria/buscar?id=8 - -
+2023-04-03 10:21:13.710 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:21:13.710 -03:00 [INF] Route matched with {action = "PesquisaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoria(ProjetoAPI.Data.Dtos.CategoriaDto.ReadCategoriaDto, System.String, Int32, Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:21:13.716 -03:00 [INF] #### GET - Requisição de busca personalizada. ####
+2023-04-03 10:21:13.716 -03:00 [INF] #### Service - Buscando categoria. ####
+2023-04-03 10:21:13.725 -03:00 [INF] #### Repository - Busca personalizada de categoria. ####
+2023-04-03 10:21:13.725 -03:00 [INF] #### Tempo do método buscar Categoria. completed in 9.2 ms
+2023-04-03 10:21:13.725 -03:00 [WRN] #### Erro: Categoria não localizada no banco de dados.
+2023-04-03 10:21:13.726 -03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-04-03 10:21:13.726 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI) in 15.886ms
+2023-04-03 10:21:13.726 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.PesquisaCategoria (ProjetoAPI)'
+2023-04-03 10:21:13.726 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/categoria/buscar?id=8 - - - 404 - text/plain;+charset=utf-8 17.3819ms
+2023-04-03 10:22:04.620 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/categoria/editar/15 application/json 52
+2023-04-03 10:22:04.620 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI)'
+2023-04-03 10:22:04.621 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditarCategoria(Int32, ProjetoAPI.Data.Dtos.CategoriaDto.UpdateCategoriaDto) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:22:04.624 -03:00 [INF] #### PUT - Requisição de editar categoria. ####
+2023-04-03 10:22:04.635 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-03 10:22:04.668 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-03 10:22:04.899 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-03 10:22:04.914 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__id_0
+2023-04-03 10:22:04.915 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-03 10:22:04.921 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-03 10:22:04.934 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Categorias` SET `DataAlteracao` = @p0, `Nome` = @p1
+WHERE `Id` = @p2;
+SELECT ROW_COUNT();
+2023-04-03 10:22:04.937 -03:00 [INF] #### Repository - Editando categoria. ####
+2023-04-03 10:22:04.937 -03:00 [INF] #### Service - Editando categoria. ####
+2023-04-03 10:22:04.938 -03:00 [INF] #### Requisição -> {"Nome":"TesteLog","Status":false}. ####
+2023-04-03 10:22:04.938 -03:00 [INF] #### Tempo de edição de Categoria. completed in 314.2 ms
+2023-04-03 10:22:04.938 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-03 10:22:04.938 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI) in 316.8128ms
+2023-04-03 10:22:04.938 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.EditarCategoria (ProjetoAPI)'
+2023-04-03 10:22:04.938 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/categoria/editar/15 application/json 52 - 200 - text/plain;+charset=utf-8 318.2111ms
+2023-04-03 10:22:28.157 -03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:5001/Categoria/15 - -
+2023-04-03 10:22:28.158 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CategoriaController.DeletaCategoria (ProjetoAPI)'
+2023-04-03 10:22:28.161 -03:00 [INF] Route matched with {action = "DeletaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeletaCategoria(Int32) on controller ProjetoAPI.Controllers.CategoriaController (ProjetoAPI).
+2023-04-03 10:22:28.162 -03:00 [INF] #### DELETE - Requisição de excluir categoria. ####
+2023-04-03 10:22:28.163 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-03 10:22:28.171 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-03 10:22:28.174 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-03 10:22:28.174 -03:00 [INF] #### Repository - Busca categoria por id. ####
+2023-04-03 10:22:28.175 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-03 10:22:28.186 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM `Categorias`
+WHERE `Id` = @p0;
+SELECT ROW_COUNT();
+2023-04-03 10:22:28.191 -03:00 [INF] #### Repository - Deletando categoria. ####
+2023-04-03 10:22:28.191 -03:00 [INF] #### Service - Deletando categoria. ####
+2023-04-03 10:22:28.191 -03:00 [INF] #### Requisição -> ID: 15. ####
+2023-04-03 10:22:28.191 -03:00 [INF] #### Tempo exclusão de Categoria. completed in 28.6 ms
+2023-04-03 10:22:28.191 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-03 10:22:28.191 -03:00 [INF] Executed action ProjetoAPI.Controllers.CategoriaController.DeletaCategoria (ProjetoAPI) in 30.2764ms
+2023-04-03 10:22:28.191 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CategoriaController.DeletaCategoria (ProjetoAPI)'
+2023-04-03 10:22:28.192 -03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:5001/Categoria/15 - - - 200 - text/plain;+charset=utf-8 34.1921ms

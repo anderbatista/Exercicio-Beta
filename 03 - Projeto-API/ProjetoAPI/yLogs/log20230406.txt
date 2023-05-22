@@ -1,0 +1,52 @@
+2023-04-06 10:26:35.004 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-04-06 10:26:51.043 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-06 10:26:51.048 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-06 10:26:51.048 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-06 10:26:51.049 -03:00 [INF] Hosting environment: Development
+2023-04-06 10:26:51.049 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\ProjetoAPI\ProjetoAPI
+2023-04-06 10:26:53.258 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-06 10:26:54.732 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 1480.2505ms
+2023-04-06 10:26:54.732 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-06 10:26:54.732 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-06 10:26:54.752 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 18.5610ms
+2023-04-06 10:26:54.992 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 259.3829ms
+2023-04-06 10:26:55.423 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-06 10:26:55.823 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 399.9318ms
+2023-04-06 10:27:31.094 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/CarrinhoDeCompra/removerProduto application/json 71
+2023-04-06 10:27:31.266 -03:00 [INF] Executing endpoint 'ProjetoAPI.Controllers.CarrinhoDeCompraController.RemoverProduto (ProjetoAPI)'
+2023-04-06 10:27:31.395 -03:00 [INF] Route matched with {action = "RemoverProduto", controller = "CarrinhoDeCompra"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult RemoverProduto(ProjetoAPI.Data.Dtos.CarrinhoProdutoDto.CreateProdutoNoCarrinhoDto) on controller ProjetoAPI.Controllers.CarrinhoDeCompraController (ProjetoAPI).
+2023-04-06 10:27:40.018 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'AppDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-06 10:27:42.146 -03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`Cep`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`QuantidadeTotalDeProdutos`, `c`.`Uf`, `c`.`ValorTotalCarrinho`
+FROM `CarrinhoDeCompra` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-06 10:27:42.454 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__buscaProdutoNoCarrinho_IdCarrinho_0='?' (DbType = Int32), @__buscaProdutoNoCarrinho_IdProduto_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`IdCarrinho`, `p`.`IdProduto`, `p`.`NomeProduto`, `p`.`QuantidadeProduto`, `p`.`ValorUnitarioProduto`
+FROM `ProdutosNoCarrinho` AS `p`
+WHERE (`p`.`IdCarrinho` = @__buscaProdutoNoCarrinho_IdCarrinho_0) AND (`p`.`IdProduto` = @__buscaProdutoNoCarrinho_IdProduto_1)
+LIMIT 2
+2023-04-06 10:27:42.946 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `CarrinhoDeCompra` SET `QuantidadeTotalDeProdutos` = @p0
+WHERE `Id` = @p1;
+SELECT ROW_COUNT();
+2023-04-06 10:27:42.951 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `ProdutosNoCarrinho` SET `QuantidadeProduto` = @p0
+WHERE `Id` = @p1;
+SELECT ROW_COUNT();
+2023-04-06 10:27:43.536 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `CarrinhoDeCompra` SET `QuantidadeTotalDeProdutos` = @p0, `ValorTotalCarrinho` = @p1
+WHERE `Id` = @p2;
+SELECT ROW_COUNT();
+2023-04-06 10:27:43.569 -03:00 [INF] Executing OkObjectResult, writing value of type 'Castle.Proxies.ProdutoNoCarrinhoProxy'.
+2023-04-06 10:27:43.811 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`IdCarrinho`, `p`.`IdProduto`, `p`.`NomeProduto`, `p`.`QuantidadeProduto`, `p`.`ValorUnitarioProduto`
+FROM `ProdutosNoCarrinho` AS `p`
+WHERE `p`.`IdCarrinho` = @__p_0
+2023-04-06 10:27:43.912 -03:00 [INF] Executed action ProjetoAPI.Controllers.CarrinhoDeCompraController.RemoverProduto (ProjetoAPI) in 12495.6859ms
+2023-04-06 10:27:43.912 -03:00 [INF] Executed endpoint 'ProjetoAPI.Controllers.CarrinhoDeCompraController.RemoverProduto (ProjetoAPI)'
+2023-04-06 10:27:43.921 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/CarrinhoDeCompra/removerProduto application/json 71 - 200 490 application/json;+charset=utf-8 12827.2056ms

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="resultado.css">
+  <title>Curriculo</title>
+</head>
+<body>
+  <form class="form-on">
+    <h2>Informações Pessoais</h2>
+    <fieldset id="info-pessoais">
+      <div id="info-pessoais-1">
+        <label>Nome completo:
+          <input id="nome" type="text">
+        </label>
+        <label>Naturalidade:
+          <input id="naturalidade" type="text">
+        </label>
+        <label>Idade:
+          <input id="idade" type="number">
+        </label>
+      </div>
+      <div id="info-pessoais-2">
+        <label>Estado civil:
+          <select id="estadoCivil" type="text">
+            <option>Solteiro</option>
+            <option>Casado</option>
+          </select>
+        </label>
+        <label>Cidade onde reside:
+          <input id="cidade" type="text">
+        </label>
+        <label>Estado onde reside:
+          <input id="estado" type="text">
+        </label>
+      </div>
+      <div id="info-pessoais-3">
+        <label>Telefone:
+          <input id="tel" type="text">
+        </label>
+        <label>Telefone para recado:
+          <input id="telRecado" type="text">
+        </label>
+        <label>E-mail:
+          <input id="email" type="email">
+        </label>
+      </div>
+    </fieldset>
+    <h2>Outras Informações</h2>
+    <fieldset id="info-objetivo">
+      <label id="objetivo-label">Objetivo profissional:
+        <textarea id="objetivo" type="text"></textarea>
+      </label>
+      <label id="info-cursoComplementar">
+        Curso complementar:
+        <textarea id="descricaoCursoComplementar">
+        </textarea>
+    </fieldset>
+    <h2>Informações Acadêmicas</h2>
+    <fieldset id="info-academica">
+      <label>Instiuição de ensino:
+        <input id="instituicao" type="text">
+      </label>
+
+      <label>Tipo do curso:
+        <input id="diploma" type="text">
+      </label>
+
+      <label>Nome do curso:
+        <input id="nomeCurso" type="text">
+      </label>
+
+      <label>Data de início:
+        <input id="d-inicio" type="date">
+      </label>
+      <br>
+      <label>Data de término (ou prevista):
+        <input id="d-termino" type="date">
+      </label>
+    </fieldset>
+    <h2>Experiência Profissional</h2>
+    <fieldset id="info-trabalho">
+      <label>Empresa:
+        <input id="empresa" type="text">
+      </label>
+
+      <label>Cargo:
+        <input id="cargo" type="text">
+      </label>
+
+      <label>Data de início:
+        <input id="t-inicio" type="date">
+      </label>
+      <br>
+      <label>Data de término (ou prevista):
+        <input id="t-termino" type="date">
+      </label>
+
+      <label>Descrição:
+        <textarea id="descricaoJob">
+      </textarea>
+      </label>
+    </fieldset>
+
+    </fieldset>
+
+    <button id="btn-send">Enviar</button>
+  </form>
+
+  <section id="result"></section>
+
+  <script src="./index.js"></script>
+</body>
+</html>

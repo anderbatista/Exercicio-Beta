@@ -1,0 +1,18 @@
+2023-04-17 08:42:00.088 -03:00 [INF] 
+##############################
+#### Iniciando ProjetoAPI ####
+##############################
+
+2023-04-17 08:42:04.085 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-17 08:42:04.087 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-17 08:42:04.087 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-17 08:42:04.087 -03:00 [INF] Hosting environment: Development
+2023-04-17 08:42:04.087 -03:00 [INF] Content root path: D:\T1-AndersonLeitao\03 - Projeto-API\ProjetoAPI
+2023-04-17 08:42:05.049 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-17 08:42:05.358 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 310.1417ms
+2023-04-17 08:42:05.360 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-17 08:42:05.368 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 7.2564ms
+2023-04-17 08:42:05.373 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-17 08:42:05.427 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.9179ms
+2023-04-17 08:42:05.492 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-17 08:42:05.593 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 100.9052ms

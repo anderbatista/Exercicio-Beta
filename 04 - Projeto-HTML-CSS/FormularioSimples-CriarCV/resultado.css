@@ -1,0 +1,26 @@
+ body {
+  background-color: rgb(161, 160, 160);
+  text-align: center;
+}
+
+#result-div {
+  background-color: white;
+  border: 5px ridge rgba(0, 0, 0, 0.699);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.253);
+  padding: 20px 70px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+#btn-voltar {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.329);
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 200px
+}
+
+#btn-voltar:active {
+  background-color: rgb(164, 164, 164);
+}
