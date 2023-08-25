@@ -1,5 +1,5 @@
 # Fique a vontade
-Projetos feitos dentro do programa Clear Tech, ofericido pela empresa Clear Sale em parceria com a Beta Learning. 
+Projetos feitos dentro do programa Clear Tech, oferecido pela empresa Clear Sale em parceria com a Beta Learning. 
 
 # Rede
 Conecte-se a minha rede: 
