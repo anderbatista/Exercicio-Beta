@@ -1,5 +1,5 @@
 # Fique a vontade
-Relembre ou aprenda algo novo. 
+Projetos feitos dentro do programa Clear Tech, ofericido pela empresa Clear Sale em parceria com a Beta Learning. 
 
 # Rede
 Conecte-se a minha rede: 
